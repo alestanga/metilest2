@@ -1,0 +1,24 @@
+# Build output
+[Bb]in/
+[Oo]bj/
+*.resources
+
+# Visual Studio / MonoDevelop state
+.vs/
+*.suo
+*.user
+*.userprefs
+*.pidb
+*.userosscache
+*.userdocs
+UpgradeLog.htm
+UpgradeLog.XML
+_UpgradeReport_Files/
+
+# VS "Backup Project" snapshots
+Backup/
+
+# NuGet / OS cruft
+packages/
+.DS_Store
+Thumbs.db

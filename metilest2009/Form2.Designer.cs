@@ -1,21 +1,3 @@
-/*
-  Copyright 2009-2015 Alessandro Stanga
-  This file is part of metilest2.
-
-   metilest2 is free software: you can redistribute it and/or modify
-   it under the terms of the GNU General Public License as published by
-   the Free Software Foundation, either version 3 of the License, or
-   (at your option) any later version.
-
-   metilest2 is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-   GNU General Public License for more details.
-
-   You should have received a copy of the GNU General Public License
-   along with metilest2.  If not, see <http://www.gnu.org/licenses/>.
-*/
-
 namespace metilest2009
 {
     partial class Elaborazione
@@ -47,9 +29,10 @@ namespace metilest2009
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.btnStop = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.cmPriorita = new System.Windows.Forms.ComboBox();
             this.lblNIodio = new System.Windows.Forms.Label();
             this.lblKariteG = new System.Windows.Forms.Label();
             this.lblKariteV = new System.Windows.Forms.Label();
@@ -208,12 +191,6 @@ namespace metilest2009
             this.lblPalmaSt48V = new System.Windows.Forms.Label();
             this.lblPalmaOle60V = new System.Windows.Forms.Label();
             this.lblPalmaRaffV = new System.Windows.Forms.Label();
-            this.lblXV = new System.Windows.Forms.Label();
-            this.lblYV = new System.Windows.Forms.Label();
-            this.lblZV = new System.Windows.Forms.Label();
-            this.lblXG = new System.Windows.Forms.Label();
-            this.lblYG = new System.Windows.Forms.Label();
-            this.lblZG = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -228,20 +205,17 @@ namespace metilest2009
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label63 = new System.Windows.Forms.Label();
-            this.label64 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.label64);
-            this.panel1.Controls.Add(this.label63);
-            this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.btnStop);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.cmPriorita);
             this.panel1.Controls.Add(this.lblNIodio);
             this.panel1.Controls.Add(this.lblKariteG);
             this.panel1.Controls.Add(this.lblKariteV);
@@ -400,12 +374,6 @@ namespace metilest2009
             this.panel1.Controls.Add(this.lblPalmaSt48V);
             this.panel1.Controls.Add(this.lblPalmaOle60V);
             this.panel1.Controls.Add(this.lblPalmaRaffV);
-            this.panel1.Controls.Add(this.lblXV);
-            this.panel1.Controls.Add(this.lblYV);
-            this.panel1.Controls.Add(this.lblZV);
-            this.panel1.Controls.Add(this.lblXG);
-            this.panel1.Controls.Add(this.lblYG);
-            this.panel1.Controls.Add(this.lblZG);
             this.panel1.Controls.Add(this.label16);
             this.panel1.Controls.Add(this.label15);
             this.panel1.Controls.Add(this.label14);
@@ -427,16 +395,6 @@ namespace metilest2009
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(9, 514);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(151, 23);
-            this.button1.TabIndex = 213;
-            this.button1.Text = "Aggiorna visualizzazione";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -448,13 +406,38 @@ namespace metilest2009
             // 
             // btnStop
             // 
-            this.btnStop.Location = new System.Drawing.Point(10, 543);
+            this.btnStop.Location = new System.Drawing.Point(10, 538);
             this.btnStop.Name = "btnStop";
-            this.btnStop.Size = new System.Drawing.Size(151, 23);
+            this.btnStop.Size = new System.Drawing.Size(121, 23);
             this.btnStop.TabIndex = 211;
             this.btnStop.Text = "Ferma elaborazione";
             this.btnStop.UseVisualStyleBackColor = true;
             this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(13, 494);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(42, 13);
+            this.label6.TabIndex = 210;
+            this.label6.Text = "Priorità:";
+            // 
+            // cmPriorita
+            // 
+            this.cmPriorita.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmPriorita.FormattingEnabled = true;
+            this.cmPriorita.Items.AddRange(new object[] {
+            "Massima",
+            "Superiore al normale",
+            "Normale",
+            "Inferiore al normale",
+            "Bassa"});
+            this.cmPriorita.Location = new System.Drawing.Point(10, 513);
+            this.cmPriorita.Name = "cmPriorita";
+            this.cmPriorita.Size = new System.Drawing.Size(121, 21);
+            this.cmPriorita.TabIndex = 209;
+            this.cmPriorita.SelectedIndexChanged += new System.EventHandler(this.cmPriorita_SelectedIndexChanged);
             // 
             // lblNIodio
             // 
@@ -469,8 +452,8 @@ namespace metilest2009
             // lblKariteG
             // 
             this.lblKariteG.AutoSize = true;
-            this.lblKariteG.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lblKariteG.Location = new System.Drawing.Point(90, 415);
+            this.lblKariteG.ForeColor = System.Drawing.Color.LemonChiffon;
+            this.lblKariteG.Location = new System.Drawing.Point(76, 415);
             this.lblKariteG.Name = "lblKariteG";
             this.lblKariteG.Size = new System.Drawing.Size(35, 13);
             this.lblKariteG.TabIndex = 200;
@@ -480,7 +463,7 @@ namespace metilest2009
             // 
             this.lblKariteV.AutoSize = true;
             this.lblKariteV.ForeColor = System.Drawing.Color.ForestGreen;
-            this.lblKariteV.Location = new System.Drawing.Point(170, 415);
+            this.lblKariteV.Location = new System.Drawing.Point(156, 415);
             this.lblKariteV.Name = "lblKariteV";
             this.lblKariteV.Size = new System.Drawing.Size(35, 13);
             this.lblKariteV.TabIndex = 199;
@@ -498,8 +481,8 @@ namespace metilest2009
             // lblBabassuG
             // 
             this.lblBabassuG.AutoSize = true;
-            this.lblBabassuG.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lblBabassuG.Location = new System.Drawing.Point(90, 402);
+            this.lblBabassuG.ForeColor = System.Drawing.Color.LemonChiffon;
+            this.lblBabassuG.Location = new System.Drawing.Point(76, 402);
             this.lblBabassuG.Name = "lblBabassuG";
             this.lblBabassuG.Size = new System.Drawing.Size(35, 13);
             this.lblBabassuG.TabIndex = 197;
@@ -509,7 +492,7 @@ namespace metilest2009
             // 
             this.lblBabassuV.AutoSize = true;
             this.lblBabassuV.ForeColor = System.Drawing.Color.ForestGreen;
-            this.lblBabassuV.Location = new System.Drawing.Point(170, 402);
+            this.lblBabassuV.Location = new System.Drawing.Point(156, 402);
             this.lblBabassuV.Name = "lblBabassuV";
             this.lblBabassuV.Size = new System.Drawing.Size(35, 13);
             this.lblBabassuV.TabIndex = 196;
@@ -527,8 +510,8 @@ namespace metilest2009
             // lblSesamoRaffG
             // 
             this.lblSesamoRaffG.AutoSize = true;
-            this.lblSesamoRaffG.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lblSesamoRaffG.Location = new System.Drawing.Point(90, 350);
+            this.lblSesamoRaffG.ForeColor = System.Drawing.Color.LemonChiffon;
+            this.lblSesamoRaffG.Location = new System.Drawing.Point(76, 350);
             this.lblSesamoRaffG.Name = "lblSesamoRaffG";
             this.lblSesamoRaffG.Size = new System.Drawing.Size(35, 13);
             this.lblSesamoRaffG.TabIndex = 194;
@@ -538,7 +521,7 @@ namespace metilest2009
             // 
             this.lblSesamoRaffV.AutoSize = true;
             this.lblSesamoRaffV.ForeColor = System.Drawing.Color.ForestGreen;
-            this.lblSesamoRaffV.Location = new System.Drawing.Point(170, 350);
+            this.lblSesamoRaffV.Location = new System.Drawing.Point(156, 350);
             this.lblSesamoRaffV.Name = "lblSesamoRaffV";
             this.lblSesamoRaffV.Size = new System.Drawing.Size(35, 13);
             this.lblSesamoRaffV.TabIndex = 193;
@@ -549,15 +532,15 @@ namespace metilest2009
             this.label50.AutoSize = true;
             this.label50.Location = new System.Drawing.Point(10, 350);
             this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(48, 13);
+            this.label50.Size = new System.Drawing.Size(66, 13);
             this.label50.TabIndex = 192;
-            this.label50.Text = "Sesamo:";
+            this.label50.Text = "Sesamo raf.:";
             // 
             // lblGirasoleALinoG
             // 
             this.lblGirasoleALinoG.AutoSize = true;
-            this.lblGirasoleALinoG.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lblGirasoleALinoG.Location = new System.Drawing.Point(90, 337);
+            this.lblGirasoleALinoG.ForeColor = System.Drawing.Color.LemonChiffon;
+            this.lblGirasoleALinoG.Location = new System.Drawing.Point(76, 337);
             this.lblGirasoleALinoG.Name = "lblGirasoleALinoG";
             this.lblGirasoleALinoG.Size = new System.Drawing.Size(35, 13);
             this.lblGirasoleALinoG.TabIndex = 191;
@@ -567,7 +550,7 @@ namespace metilest2009
             // 
             this.lblGirasoleALinoV.AutoSize = true;
             this.lblGirasoleALinoV.ForeColor = System.Drawing.Color.ForestGreen;
-            this.lblGirasoleALinoV.Location = new System.Drawing.Point(170, 337);
+            this.lblGirasoleALinoV.Location = new System.Drawing.Point(156, 337);
             this.lblGirasoleALinoV.Name = "lblGirasoleALinoV";
             this.lblGirasoleALinoV.Size = new System.Drawing.Size(35, 13);
             this.lblGirasoleALinoV.TabIndex = 190;
@@ -585,8 +568,8 @@ namespace metilest2009
             // lblPalmistoFrazG
             // 
             this.lblPalmistoFrazG.AutoSize = true;
-            this.lblPalmistoFrazG.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lblPalmistoFrazG.Location = new System.Drawing.Point(90, 246);
+            this.lblPalmistoFrazG.ForeColor = System.Drawing.Color.LemonChiffon;
+            this.lblPalmistoFrazG.Location = new System.Drawing.Point(76, 246);
             this.lblPalmistoFrazG.Name = "lblPalmistoFrazG";
             this.lblPalmistoFrazG.Size = new System.Drawing.Size(35, 13);
             this.lblPalmistoFrazG.TabIndex = 188;
@@ -596,7 +579,7 @@ namespace metilest2009
             // 
             this.lblPalmistoFrazV.AutoSize = true;
             this.lblPalmistoFrazV.ForeColor = System.Drawing.Color.ForestGreen;
-            this.lblPalmistoFrazV.Location = new System.Drawing.Point(170, 246);
+            this.lblPalmistoFrazV.Location = new System.Drawing.Point(156, 246);
             this.lblPalmistoFrazV.Name = "lblPalmistoFrazV";
             this.lblPalmistoFrazV.Size = new System.Drawing.Size(35, 13);
             this.lblPalmistoFrazV.TabIndex = 187;
@@ -614,8 +597,8 @@ namespace metilest2009
             // lblPalmaSt53G
             // 
             this.lblPalmaSt53G.AutoSize = true;
-            this.lblPalmaSt53G.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lblPalmaSt53G.Location = new System.Drawing.Point(90, 168);
+            this.lblPalmaSt53G.ForeColor = System.Drawing.Color.LemonChiffon;
+            this.lblPalmaSt53G.Location = new System.Drawing.Point(76, 168);
             this.lblPalmaSt53G.Name = "lblPalmaSt53G";
             this.lblPalmaSt53G.Size = new System.Drawing.Size(35, 13);
             this.lblPalmaSt53G.TabIndex = 185;
@@ -625,7 +608,7 @@ namespace metilest2009
             // 
             this.lblPalmaSt53V.AutoSize = true;
             this.lblPalmaSt53V.ForeColor = System.Drawing.Color.ForestGreen;
-            this.lblPalmaSt53V.Location = new System.Drawing.Point(170, 168);
+            this.lblPalmaSt53V.Location = new System.Drawing.Point(156, 168);
             this.lblPalmaSt53V.Name = "lblPalmaSt53V";
             this.lblPalmaSt53V.Size = new System.Drawing.Size(35, 13);
             this.lblPalmaSt53V.TabIndex = 184;
@@ -643,8 +626,8 @@ namespace metilest2009
             // lblPalmaOle64G
             // 
             this.lblPalmaOle64G.AutoSize = true;
-            this.lblPalmaOle64G.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lblPalmaOle64G.Location = new System.Drawing.Point(90, 142);
+            this.lblPalmaOle64G.ForeColor = System.Drawing.Color.LemonChiffon;
+            this.lblPalmaOle64G.Location = new System.Drawing.Point(76, 142);
             this.lblPalmaOle64G.Name = "lblPalmaOle64G";
             this.lblPalmaOle64G.Size = new System.Drawing.Size(62, 13);
             this.lblPalmaOle64G.TabIndex = 182;
@@ -654,7 +637,7 @@ namespace metilest2009
             // 
             this.lblPalmaOle64V.AutoSize = true;
             this.lblPalmaOle64V.ForeColor = System.Drawing.Color.ForestGreen;
-            this.lblPalmaOle64V.Location = new System.Drawing.Point(170, 142);
+            this.lblPalmaOle64V.Location = new System.Drawing.Point(156, 142);
             this.lblPalmaOle64V.Name = "lblPalmaOle64V";
             this.lblPalmaOle64V.Size = new System.Drawing.Size(61, 13);
             this.lblPalmaOle64V.TabIndex = 181;
@@ -672,8 +655,8 @@ namespace metilest2009
             // lblPalmaOle62G
             // 
             this.lblPalmaOle62G.AutoSize = true;
-            this.lblPalmaOle62G.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lblPalmaOle62G.Location = new System.Drawing.Point(90, 129);
+            this.lblPalmaOle62G.ForeColor = System.Drawing.Color.LemonChiffon;
+            this.lblPalmaOle62G.Location = new System.Drawing.Point(76, 129);
             this.lblPalmaOle62G.Name = "lblPalmaOle62G";
             this.lblPalmaOle62G.Size = new System.Drawing.Size(62, 13);
             this.lblPalmaOle62G.TabIndex = 179;
@@ -683,7 +666,7 @@ namespace metilest2009
             // 
             this.lblPalmaOle62V.AutoSize = true;
             this.lblPalmaOle62V.ForeColor = System.Drawing.Color.ForestGreen;
-            this.lblPalmaOle62V.Location = new System.Drawing.Point(170, 129);
+            this.lblPalmaOle62V.Location = new System.Drawing.Point(156, 129);
             this.lblPalmaOle62V.Name = "lblPalmaOle62V";
             this.lblPalmaOle62V.Size = new System.Drawing.Size(61, 13);
             this.lblPalmaOle62V.TabIndex = 178;
@@ -721,7 +704,7 @@ namespace metilest2009
             // lblC18CONG
             // 
             this.lblC18CONG.AutoSize = true;
-            this.lblC18CONG.ForeColor = System.Drawing.Color.OrangeRed;
+            this.lblC18CONG.ForeColor = System.Drawing.Color.LemonChiffon;
             this.lblC18CONG.Location = new System.Drawing.Point(400, 337);
             this.lblC18CONG.Name = "lblC18CONG";
             this.lblC18CONG.Size = new System.Drawing.Size(73, 13);
@@ -875,7 +858,7 @@ namespace metilest2009
             // lblC22mG
             // 
             this.lblC22mG.AutoSize = true;
-            this.lblC22mG.ForeColor = System.Drawing.Color.OrangeRed;
+            this.lblC22mG.ForeColor = System.Drawing.Color.LemonChiffon;
             this.lblC22mG.Location = new System.Drawing.Point(400, 389);
             this.lblC22mG.Name = "lblC22mG";
             this.lblC22mG.Size = new System.Drawing.Size(73, 13);
@@ -885,7 +868,7 @@ namespace metilest2009
             // lblC22G
             // 
             this.lblC22G.AutoSize = true;
-            this.lblC22G.ForeColor = System.Drawing.Color.OrangeRed;
+            this.lblC22G.ForeColor = System.Drawing.Color.LemonChiffon;
             this.lblC22G.Location = new System.Drawing.Point(400, 376);
             this.lblC22G.Name = "lblC22G";
             this.lblC22G.Size = new System.Drawing.Size(73, 13);
@@ -895,7 +878,7 @@ namespace metilest2009
             // lblC20mG
             // 
             this.lblC20mG.AutoSize = true;
-            this.lblC20mG.ForeColor = System.Drawing.Color.OrangeRed;
+            this.lblC20mG.ForeColor = System.Drawing.Color.LemonChiffon;
             this.lblC20mG.Location = new System.Drawing.Point(400, 363);
             this.lblC20mG.Name = "lblC20mG";
             this.lblC20mG.Size = new System.Drawing.Size(73, 13);
@@ -1115,7 +1098,7 @@ namespace metilest2009
             // lblC20G
             // 
             this.lblC20G.AutoSize = true;
-            this.lblC20G.ForeColor = System.Drawing.Color.OrangeRed;
+            this.lblC20G.ForeColor = System.Drawing.Color.LemonChiffon;
             this.lblC20G.Location = new System.Drawing.Point(400, 350);
             this.lblC20G.Name = "lblC20G";
             this.lblC20G.Size = new System.Drawing.Size(73, 13);
@@ -1125,7 +1108,7 @@ namespace metilest2009
             // lblC18mmmG
             // 
             this.lblC18mmmG.AutoSize = true;
-            this.lblC18mmmG.ForeColor = System.Drawing.Color.OrangeRed;
+            this.lblC18mmmG.ForeColor = System.Drawing.Color.LemonChiffon;
             this.lblC18mmmG.Location = new System.Drawing.Point(400, 324);
             this.lblC18mmmG.Name = "lblC18mmmG";
             this.lblC18mmmG.Size = new System.Drawing.Size(73, 13);
@@ -1135,7 +1118,7 @@ namespace metilest2009
             // lblC18mmG
             // 
             this.lblC18mmG.AutoSize = true;
-            this.lblC18mmG.ForeColor = System.Drawing.Color.OrangeRed;
+            this.lblC18mmG.ForeColor = System.Drawing.Color.LemonChiffon;
             this.lblC18mmG.Location = new System.Drawing.Point(400, 311);
             this.lblC18mmG.Name = "lblC18mmG";
             this.lblC18mmG.Size = new System.Drawing.Size(73, 13);
@@ -1145,7 +1128,7 @@ namespace metilest2009
             // lblC18mG
             // 
             this.lblC18mG.AutoSize = true;
-            this.lblC18mG.ForeColor = System.Drawing.Color.OrangeRed;
+            this.lblC18mG.ForeColor = System.Drawing.Color.LemonChiffon;
             this.lblC18mG.Location = new System.Drawing.Point(400, 298);
             this.lblC18mG.Name = "lblC18mG";
             this.lblC18mG.Size = new System.Drawing.Size(73, 13);
@@ -1155,7 +1138,7 @@ namespace metilest2009
             // lblC18ISOG
             // 
             this.lblC18ISOG.AutoSize = true;
-            this.lblC18ISOG.ForeColor = System.Drawing.Color.OrangeRed;
+            this.lblC18ISOG.ForeColor = System.Drawing.Color.LemonChiffon;
             this.lblC18ISOG.Location = new System.Drawing.Point(400, 285);
             this.lblC18ISOG.Name = "lblC18ISOG";
             this.lblC18ISOG.Size = new System.Drawing.Size(73, 13);
@@ -1165,7 +1148,7 @@ namespace metilest2009
             // lblC18G
             // 
             this.lblC18G.AutoSize = true;
-            this.lblC18G.ForeColor = System.Drawing.Color.OrangeRed;
+            this.lblC18G.ForeColor = System.Drawing.Color.LemonChiffon;
             this.lblC18G.Location = new System.Drawing.Point(400, 272);
             this.lblC18G.Name = "lblC18G";
             this.lblC18G.Size = new System.Drawing.Size(73, 13);
@@ -1175,7 +1158,7 @@ namespace metilest2009
             // lblC17mG
             // 
             this.lblC17mG.AutoSize = true;
-            this.lblC17mG.ForeColor = System.Drawing.Color.OrangeRed;
+            this.lblC17mG.ForeColor = System.Drawing.Color.LemonChiffon;
             this.lblC17mG.Location = new System.Drawing.Point(400, 259);
             this.lblC17mG.Name = "lblC17mG";
             this.lblC17mG.Size = new System.Drawing.Size(73, 13);
@@ -1185,7 +1168,7 @@ namespace metilest2009
             // lblC17G
             // 
             this.lblC17G.AutoSize = true;
-            this.lblC17G.ForeColor = System.Drawing.Color.OrangeRed;
+            this.lblC17G.ForeColor = System.Drawing.Color.LemonChiffon;
             this.lblC17G.Location = new System.Drawing.Point(400, 246);
             this.lblC17G.Name = "lblC17G";
             this.lblC17G.Size = new System.Drawing.Size(73, 13);
@@ -1195,7 +1178,7 @@ namespace metilest2009
             // lblC17ISOG
             // 
             this.lblC17ISOG.AutoSize = true;
-            this.lblC17ISOG.ForeColor = System.Drawing.Color.OrangeRed;
+            this.lblC17ISOG.ForeColor = System.Drawing.Color.LemonChiffon;
             this.lblC17ISOG.Location = new System.Drawing.Point(400, 233);
             this.lblC17ISOG.Name = "lblC17ISOG";
             this.lblC17ISOG.Size = new System.Drawing.Size(73, 13);
@@ -1205,7 +1188,7 @@ namespace metilest2009
             // lblC16mG
             // 
             this.lblC16mG.AutoSize = true;
-            this.lblC16mG.ForeColor = System.Drawing.Color.OrangeRed;
+            this.lblC16mG.ForeColor = System.Drawing.Color.LemonChiffon;
             this.lblC16mG.Location = new System.Drawing.Point(400, 220);
             this.lblC16mG.Name = "lblC16mG";
             this.lblC16mG.Size = new System.Drawing.Size(73, 13);
@@ -1215,7 +1198,7 @@ namespace metilest2009
             // lblC16G
             // 
             this.lblC16G.AutoSize = true;
-            this.lblC16G.ForeColor = System.Drawing.Color.OrangeRed;
+            this.lblC16G.ForeColor = System.Drawing.Color.LemonChiffon;
             this.lblC16G.Location = new System.Drawing.Point(400, 207);
             this.lblC16G.Name = "lblC16G";
             this.lblC16G.Size = new System.Drawing.Size(73, 13);
@@ -1225,7 +1208,7 @@ namespace metilest2009
             // lblC16ISOG
             // 
             this.lblC16ISOG.AutoSize = true;
-            this.lblC16ISOG.ForeColor = System.Drawing.Color.OrangeRed;
+            this.lblC16ISOG.ForeColor = System.Drawing.Color.LemonChiffon;
             this.lblC16ISOG.Location = new System.Drawing.Point(400, 194);
             this.lblC16ISOG.Name = "lblC16ISOG";
             this.lblC16ISOG.Size = new System.Drawing.Size(73, 13);
@@ -1235,7 +1218,7 @@ namespace metilest2009
             // lblC15G
             // 
             this.lblC15G.AutoSize = true;
-            this.lblC15G.ForeColor = System.Drawing.Color.OrangeRed;
+            this.lblC15G.ForeColor = System.Drawing.Color.LemonChiffon;
             this.lblC15G.Location = new System.Drawing.Point(400, 181);
             this.lblC15G.Name = "lblC15G";
             this.lblC15G.Size = new System.Drawing.Size(73, 13);
@@ -1245,7 +1228,7 @@ namespace metilest2009
             // lblC14mG
             // 
             this.lblC14mG.AutoSize = true;
-            this.lblC14mG.ForeColor = System.Drawing.Color.OrangeRed;
+            this.lblC14mG.ForeColor = System.Drawing.Color.LemonChiffon;
             this.lblC14mG.Location = new System.Drawing.Point(400, 168);
             this.lblC14mG.Name = "lblC14mG";
             this.lblC14mG.Size = new System.Drawing.Size(73, 13);
@@ -1255,7 +1238,7 @@ namespace metilest2009
             // lblC14G
             // 
             this.lblC14G.AutoSize = true;
-            this.lblC14G.ForeColor = System.Drawing.Color.OrangeRed;
+            this.lblC14G.ForeColor = System.Drawing.Color.LemonChiffon;
             this.lblC14G.Location = new System.Drawing.Point(400, 155);
             this.lblC14G.Name = "lblC14G";
             this.lblC14G.Size = new System.Drawing.Size(73, 13);
@@ -1265,7 +1248,7 @@ namespace metilest2009
             // lblC12G
             // 
             this.lblC12G.AutoSize = true;
-            this.lblC12G.ForeColor = System.Drawing.Color.OrangeRed;
+            this.lblC12G.ForeColor = System.Drawing.Color.LemonChiffon;
             this.lblC12G.Location = new System.Drawing.Point(400, 142);
             this.lblC12G.Name = "lblC12G";
             this.lblC12G.Size = new System.Drawing.Size(73, 13);
@@ -1275,7 +1258,7 @@ namespace metilest2009
             // lblC10G
             // 
             this.lblC10G.AutoSize = true;
-            this.lblC10G.ForeColor = System.Drawing.Color.OrangeRed;
+            this.lblC10G.ForeColor = System.Drawing.Color.LemonChiffon;
             this.lblC10G.Location = new System.Drawing.Point(400, 129);
             this.lblC10G.Name = "lblC10G";
             this.lblC10G.Size = new System.Drawing.Size(73, 13);
@@ -1285,7 +1268,7 @@ namespace metilest2009
             // lblC8G
             // 
             this.lblC8G.AutoSize = true;
-            this.lblC8G.ForeColor = System.Drawing.Color.OrangeRed;
+            this.lblC8G.ForeColor = System.Drawing.Color.LemonChiffon;
             this.lblC8G.Location = new System.Drawing.Point(400, 116);
             this.lblC8G.Name = "lblC8G";
             this.lblC8G.Size = new System.Drawing.Size(73, 13);
@@ -1295,7 +1278,7 @@ namespace metilest2009
             // lblC6G
             // 
             this.lblC6G.AutoSize = true;
-            this.lblC6G.ForeColor = System.Drawing.Color.OrangeRed;
+            this.lblC6G.ForeColor = System.Drawing.Color.LemonChiffon;
             this.lblC6G.Location = new System.Drawing.Point(400, 103);
             this.lblC6G.Name = "lblC6G";
             this.lblC6G.Size = new System.Drawing.Size(73, 13);
@@ -1321,7 +1304,7 @@ namespace metilest2009
             // lblNConfrEffG
             // 
             this.lblNConfrEffG.AutoSize = true;
-            this.lblNConfrEffG.ForeColor = System.Drawing.Color.OrangeRed;
+            this.lblNConfrEffG.ForeColor = System.Drawing.Color.LemonChiffon;
             this.lblNConfrEffG.Location = new System.Drawing.Point(492, 460);
             this.lblNConfrEffG.Name = "lblNConfrEffG";
             this.lblNConfrEffG.Size = new System.Drawing.Size(71, 13);
@@ -1341,7 +1324,7 @@ namespace metilest2009
             // lblIndAppRelG
             // 
             this.lblIndAppRelG.AutoSize = true;
-            this.lblIndAppRelG.ForeColor = System.Drawing.Color.OrangeRed;
+            this.lblIndAppRelG.ForeColor = System.Drawing.Color.LemonChiffon;
             this.lblIndAppRelG.Location = new System.Drawing.Point(492, 434);
             this.lblIndAppRelG.Name = "lblIndAppRelG";
             this.lblIndAppRelG.Size = new System.Drawing.Size(75, 13);
@@ -1378,7 +1361,7 @@ namespace metilest2009
             // lblC4G
             // 
             this.lblC4G.AutoSize = true;
-            this.lblC4G.ForeColor = System.Drawing.Color.OrangeRed;
+            this.lblC4G.ForeColor = System.Drawing.Color.LemonChiffon;
             this.lblC4G.Location = new System.Drawing.Point(400, 90);
             this.lblC4G.Name = "lblC4G";
             this.lblC4G.Size = new System.Drawing.Size(73, 13);
@@ -1470,8 +1453,8 @@ namespace metilest2009
             // lblBrurroG
             // 
             this.lblBrurroG.AutoSize = true;
-            this.lblBrurroG.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lblBrurroG.Location = new System.Drawing.Point(90, 428);
+            this.lblBrurroG.ForeColor = System.Drawing.Color.LemonChiffon;
+            this.lblBrurroG.Location = new System.Drawing.Point(76, 428);
             this.lblBrurroG.Name = "lblBrurroG";
             this.lblBrurroG.Size = new System.Drawing.Size(53, 13);
             this.lblBrurroG.TabIndex = 81;
@@ -1480,18 +1463,18 @@ namespace metilest2009
             // lblSegoRaffG
             // 
             this.lblSegoRaffG.AutoSize = true;
-            this.lblSegoRaffG.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lblSegoRaffG.Location = new System.Drawing.Point(90, 454);
+            this.lblSegoRaffG.ForeColor = System.Drawing.Color.LemonChiffon;
+            this.lblSegoRaffG.Location = new System.Drawing.Point(76, 454);
             this.lblSegoRaffG.Name = "lblSegoRaffG";
-            this.lblSegoRaffG.Size = new System.Drawing.Size(70, 13);
+            this.lblSegoRaffG.Size = new System.Drawing.Size(69, 13);
             this.lblSegoRaffG.TabIndex = 80;
-            this.lblSegoRaffG.Text = "lblSegoRaffG";
+            this.lblSegoRaffG.Text = "lblSegoRaffV";
             // 
             // lblStruttoG
             // 
             this.lblStruttoG.AutoSize = true;
-            this.lblStruttoG.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lblStruttoG.Location = new System.Drawing.Point(90, 441);
+            this.lblStruttoG.ForeColor = System.Drawing.Color.LemonChiffon;
+            this.lblStruttoG.Location = new System.Drawing.Point(76, 441);
             this.lblStruttoG.Name = "lblStruttoG";
             this.lblStruttoG.Size = new System.Drawing.Size(56, 13);
             this.lblStruttoG.TabIndex = 79;
@@ -1500,8 +1483,8 @@ namespace metilest2009
             // lblBurroCacaoG
             // 
             this.lblBurroCacaoG.AutoSize = true;
-            this.lblBurroCacaoG.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lblBurroCacaoG.Location = new System.Drawing.Point(90, 389);
+            this.lblBurroCacaoG.ForeColor = System.Drawing.Color.LemonChiffon;
+            this.lblBurroCacaoG.Location = new System.Drawing.Point(76, 389);
             this.lblBurroCacaoG.Name = "lblBurroCacaoG";
             this.lblBurroCacaoG.Size = new System.Drawing.Size(81, 13);
             this.lblBurroCacaoG.TabIndex = 78;
@@ -1510,8 +1493,8 @@ namespace metilest2009
             // lblOlivaG
             // 
             this.lblOlivaG.AutoSize = true;
-            this.lblOlivaG.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lblOlivaG.Location = new System.Drawing.Point(90, 376);
+            this.lblOlivaG.ForeColor = System.Drawing.Color.LemonChiffon;
+            this.lblOlivaG.Location = new System.Drawing.Point(76, 376);
             this.lblOlivaG.Name = "lblOlivaG";
             this.lblOlivaG.Size = new System.Drawing.Size(49, 13);
             this.lblOlivaG.TabIndex = 77;
@@ -1520,8 +1503,8 @@ namespace metilest2009
             // lblGirasoleAOleG
             // 
             this.lblGirasoleAOleG.AutoSize = true;
-            this.lblGirasoleAOleG.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lblGirasoleAOleG.Location = new System.Drawing.Point(90, 324);
+            this.lblGirasoleAOleG.ForeColor = System.Drawing.Color.LemonChiffon;
+            this.lblGirasoleAOleG.Location = new System.Drawing.Point(76, 324);
             this.lblGirasoleAOleG.Name = "lblGirasoleAOleG";
             this.lblGirasoleAOleG.Size = new System.Drawing.Size(63, 13);
             this.lblGirasoleAOleG.TabIndex = 76;
@@ -1530,8 +1513,8 @@ namespace metilest2009
             // lblVinaccioloG
             // 
             this.lblVinaccioloG.AutoSize = true;
-            this.lblVinaccioloG.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lblVinaccioloG.Location = new System.Drawing.Point(90, 298);
+            this.lblVinaccioloG.ForeColor = System.Drawing.Color.LemonChiffon;
+            this.lblVinaccioloG.Location = new System.Drawing.Point(76, 298);
             this.lblVinaccioloG.Name = "lblVinaccioloG";
             this.lblVinaccioloG.Size = new System.Drawing.Size(74, 13);
             this.lblVinaccioloG.TabIndex = 75;
@@ -1540,8 +1523,8 @@ namespace metilest2009
             // lblArachideRG
             // 
             this.lblArachideRG.AutoSize = true;
-            this.lblArachideRG.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lblArachideRG.Location = new System.Drawing.Point(90, 285);
+            this.lblArachideRG.ForeColor = System.Drawing.Color.LemonChiffon;
+            this.lblArachideRG.Location = new System.Drawing.Point(76, 285);
             this.lblArachideRG.Name = "lblArachideRG";
             this.lblArachideRG.Size = new System.Drawing.Size(75, 13);
             this.lblArachideRG.TabIndex = 73;
@@ -1550,8 +1533,8 @@ namespace metilest2009
             // lblColzaRaffG
             // 
             this.lblColzaRaffG.AutoSize = true;
-            this.lblColzaRaffG.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lblColzaRaffG.Location = new System.Drawing.Point(90, 272);
+            this.lblColzaRaffG.ForeColor = System.Drawing.Color.LemonChiffon;
+            this.lblColzaRaffG.Location = new System.Drawing.Point(76, 272);
             this.lblColzaRaffG.Name = "lblColzaRaffG";
             this.lblColzaRaffG.Size = new System.Drawing.Size(71, 13);
             this.lblColzaRaffG.TabIndex = 72;
@@ -1560,8 +1543,8 @@ namespace metilest2009
             // lblMaisRaffG
             // 
             this.lblMaisRaffG.AutoSize = true;
-            this.lblMaisRaffG.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lblMaisRaffG.Location = new System.Drawing.Point(90, 311);
+            this.lblMaisRaffG.ForeColor = System.Drawing.Color.LemonChiffon;
+            this.lblMaisRaffG.Location = new System.Drawing.Point(76, 311);
             this.lblMaisRaffG.Name = "lblMaisRaffG";
             this.lblMaisRaffG.Size = new System.Drawing.Size(67, 13);
             this.lblMaisRaffG.TabIndex = 70;
@@ -1570,8 +1553,8 @@ namespace metilest2009
             // lblNocciolaG
             // 
             this.lblNocciolaG.AutoSize = true;
-            this.lblNocciolaG.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lblNocciolaG.Location = new System.Drawing.Point(90, 363);
+            this.lblNocciolaG.ForeColor = System.Drawing.Color.LemonChiffon;
+            this.lblNocciolaG.Location = new System.Drawing.Point(76, 363);
             this.lblNocciolaG.Name = "lblNocciolaG";
             this.lblNocciolaG.Size = new System.Drawing.Size(67, 13);
             this.lblNocciolaG.TabIndex = 69;
@@ -1581,7 +1564,7 @@ namespace metilest2009
             // 
             this.lblBrurroV.AutoSize = true;
             this.lblBrurroV.ForeColor = System.Drawing.Color.ForestGreen;
-            this.lblBrurroV.Location = new System.Drawing.Point(170, 428);
+            this.lblBrurroV.Location = new System.Drawing.Point(156, 428);
             this.lblBrurroV.Name = "lblBrurroV";
             this.lblBrurroV.Size = new System.Drawing.Size(52, 13);
             this.lblBrurroV.TabIndex = 68;
@@ -1591,7 +1574,7 @@ namespace metilest2009
             // 
             this.lblSegoRaffV.AutoSize = true;
             this.lblSegoRaffV.ForeColor = System.Drawing.Color.ForestGreen;
-            this.lblSegoRaffV.Location = new System.Drawing.Point(170, 454);
+            this.lblSegoRaffV.Location = new System.Drawing.Point(156, 454);
             this.lblSegoRaffV.Name = "lblSegoRaffV";
             this.lblSegoRaffV.Size = new System.Drawing.Size(69, 13);
             this.lblSegoRaffV.TabIndex = 67;
@@ -1601,7 +1584,7 @@ namespace metilest2009
             // 
             this.lblStruttoV.AutoSize = true;
             this.lblStruttoV.ForeColor = System.Drawing.Color.ForestGreen;
-            this.lblStruttoV.Location = new System.Drawing.Point(170, 441);
+            this.lblStruttoV.Location = new System.Drawing.Point(156, 441);
             this.lblStruttoV.Name = "lblStruttoV";
             this.lblStruttoV.Size = new System.Drawing.Size(55, 13);
             this.lblStruttoV.TabIndex = 66;
@@ -1611,7 +1594,7 @@ namespace metilest2009
             // 
             this.lblBurroCacaoV.AutoSize = true;
             this.lblBurroCacaoV.ForeColor = System.Drawing.Color.ForestGreen;
-            this.lblBurroCacaoV.Location = new System.Drawing.Point(170, 389);
+            this.lblBurroCacaoV.Location = new System.Drawing.Point(156, 389);
             this.lblBurroCacaoV.Name = "lblBurroCacaoV";
             this.lblBurroCacaoV.Size = new System.Drawing.Size(80, 13);
             this.lblBurroCacaoV.TabIndex = 65;
@@ -1621,7 +1604,7 @@ namespace metilest2009
             // 
             this.lblOlivaV.AutoSize = true;
             this.lblOlivaV.ForeColor = System.Drawing.Color.ForestGreen;
-            this.lblOlivaV.Location = new System.Drawing.Point(170, 376);
+            this.lblOlivaV.Location = new System.Drawing.Point(156, 376);
             this.lblOlivaV.Name = "lblOlivaV";
             this.lblOlivaV.Size = new System.Drawing.Size(48, 13);
             this.lblOlivaV.TabIndex = 64;
@@ -1631,7 +1614,7 @@ namespace metilest2009
             // 
             this.lblGirasoleAOleV.AutoSize = true;
             this.lblGirasoleAOleV.ForeColor = System.Drawing.Color.ForestGreen;
-            this.lblGirasoleAOleV.Location = new System.Drawing.Point(170, 324);
+            this.lblGirasoleAOleV.Location = new System.Drawing.Point(156, 324);
             this.lblGirasoleAOleV.Name = "lblGirasoleAOleV";
             this.lblGirasoleAOleV.Size = new System.Drawing.Size(62, 13);
             this.lblGirasoleAOleV.TabIndex = 63;
@@ -1641,7 +1624,7 @@ namespace metilest2009
             // 
             this.lblVinaccioloV.AutoSize = true;
             this.lblVinaccioloV.ForeColor = System.Drawing.Color.ForestGreen;
-            this.lblVinaccioloV.Location = new System.Drawing.Point(170, 298);
+            this.lblVinaccioloV.Location = new System.Drawing.Point(156, 298);
             this.lblVinaccioloV.Name = "lblVinaccioloV";
             this.lblVinaccioloV.Size = new System.Drawing.Size(73, 13);
             this.lblVinaccioloV.TabIndex = 62;
@@ -1651,7 +1634,7 @@ namespace metilest2009
             // 
             this.lblArachideRV.AutoSize = true;
             this.lblArachideRV.ForeColor = System.Drawing.Color.ForestGreen;
-            this.lblArachideRV.Location = new System.Drawing.Point(170, 285);
+            this.lblArachideRV.Location = new System.Drawing.Point(156, 285);
             this.lblArachideRV.Name = "lblArachideRV";
             this.lblArachideRV.Size = new System.Drawing.Size(74, 13);
             this.lblArachideRV.TabIndex = 60;
@@ -1661,7 +1644,7 @@ namespace metilest2009
             // 
             this.lblColzaRaffV.AutoSize = true;
             this.lblColzaRaffV.ForeColor = System.Drawing.Color.ForestGreen;
-            this.lblColzaRaffV.Location = new System.Drawing.Point(170, 272);
+            this.lblColzaRaffV.Location = new System.Drawing.Point(156, 272);
             this.lblColzaRaffV.Name = "lblColzaRaffV";
             this.lblColzaRaffV.Size = new System.Drawing.Size(70, 13);
             this.lblColzaRaffV.TabIndex = 59;
@@ -1671,7 +1654,7 @@ namespace metilest2009
             // 
             this.lblMaisRaffV.AutoSize = true;
             this.lblMaisRaffV.ForeColor = System.Drawing.Color.ForestGreen;
-            this.lblMaisRaffV.Location = new System.Drawing.Point(170, 311);
+            this.lblMaisRaffV.Location = new System.Drawing.Point(156, 311);
             this.lblMaisRaffV.Name = "lblMaisRaffV";
             this.lblMaisRaffV.Size = new System.Drawing.Size(66, 13);
             this.lblMaisRaffV.TabIndex = 57;
@@ -1681,7 +1664,7 @@ namespace metilest2009
             // 
             this.lblNocciolaV.AutoSize = true;
             this.lblNocciolaV.ForeColor = System.Drawing.Color.ForestGreen;
-            this.lblNocciolaV.Location = new System.Drawing.Point(170, 363);
+            this.lblNocciolaV.Location = new System.Drawing.Point(156, 363);
             this.lblNocciolaV.Name = "lblNocciolaV";
             this.lblNocciolaV.Size = new System.Drawing.Size(66, 13);
             this.lblNocciolaV.TabIndex = 56;
@@ -1701,9 +1684,9 @@ namespace metilest2009
             this.label45.AutoSize = true;
             this.label45.Location = new System.Drawing.Point(10, 454);
             this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(35, 13);
+            this.label45.Size = new System.Drawing.Size(56, 13);
             this.label45.TabIndex = 54;
-            this.label45.Text = "Sego:";
+            this.label45.Text = "Sego raff.:";
             // 
             // label46
             // 
@@ -1746,18 +1729,18 @@ namespace metilest2009
             this.label51.AutoSize = true;
             this.label51.Location = new System.Drawing.Point(10, 285);
             this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(52, 13);
+            this.label51.Size = new System.Drawing.Size(61, 13);
             this.label51.TabIndex = 48;
-            this.label51.Text = "Arachide:";
+            this.label51.Text = "Arachide r.:";
             // 
             // label52
             // 
             this.label52.AutoSize = true;
             this.label52.Location = new System.Drawing.Point(10, 272);
             this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(36, 13);
+            this.label52.Size = new System.Drawing.Size(57, 13);
             this.label52.TabIndex = 47;
-            this.label52.Text = "Colza:";
+            this.label52.Text = "Colza raff.:";
             // 
             // label53
             // 
@@ -1773,9 +1756,9 @@ namespace metilest2009
             this.label55.AutoSize = true;
             this.label55.Location = new System.Drawing.Point(10, 311);
             this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(32, 13);
+            this.label55.Size = new System.Drawing.Size(53, 13);
             this.label55.TabIndex = 44;
-            this.label55.Text = "Mais:";
+            this.label55.Text = "Mais raff.:";
             // 
             // label56
             // 
@@ -1789,8 +1772,8 @@ namespace metilest2009
             // lblSoiaRaffG
             // 
             this.lblSoiaRaffG.AutoSize = true;
-            this.lblSoiaRaffG.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lblSoiaRaffG.Location = new System.Drawing.Point(90, 259);
+            this.lblSoiaRaffG.ForeColor = System.Drawing.Color.LemonChiffon;
+            this.lblSoiaRaffG.Location = new System.Drawing.Point(76, 259);
             this.lblSoiaRaffG.Name = "lblSoiaRaffG";
             this.lblSoiaRaffG.Size = new System.Drawing.Size(66, 13);
             this.lblSoiaRaffG.TabIndex = 41;
@@ -1799,8 +1782,8 @@ namespace metilest2009
             // lblPalmistoSTG
             // 
             this.lblPalmistoSTG.AutoSize = true;
-            this.lblPalmistoSTG.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lblPalmistoSTG.Location = new System.Drawing.Point(90, 233);
+            this.lblPalmistoSTG.ForeColor = System.Drawing.Color.LemonChiffon;
+            this.lblPalmistoSTG.Location = new System.Drawing.Point(76, 233);
             this.lblPalmistoSTG.Name = "lblPalmistoSTG";
             this.lblPalmistoSTG.Size = new System.Drawing.Size(78, 13);
             this.lblPalmistoSTG.TabIndex = 40;
@@ -1809,8 +1792,8 @@ namespace metilest2009
             // lblPalmistoIG
             // 
             this.lblPalmistoIG.AutoSize = true;
-            this.lblPalmistoIG.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lblPalmistoIG.Location = new System.Drawing.Point(90, 220);
+            this.lblPalmistoIG.ForeColor = System.Drawing.Color.LemonChiffon;
+            this.lblPalmistoIG.Location = new System.Drawing.Point(76, 220);
             this.lblPalmistoIG.Name = "lblPalmistoIG";
             this.lblPalmistoIG.Size = new System.Drawing.Size(67, 13);
             this.lblPalmistoIG.TabIndex = 39;
@@ -1819,8 +1802,8 @@ namespace metilest2009
             // lblPalmistoRG
             // 
             this.lblPalmistoRG.AutoSize = true;
-            this.lblPalmistoRG.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lblPalmistoRG.Location = new System.Drawing.Point(90, 207);
+            this.lblPalmistoRG.ForeColor = System.Drawing.Color.LemonChiffon;
+            this.lblPalmistoRG.Location = new System.Drawing.Point(76, 207);
             this.lblPalmistoRG.Name = "lblPalmistoRG";
             this.lblPalmistoRG.Size = new System.Drawing.Size(72, 13);
             this.lblPalmistoRG.TabIndex = 38;
@@ -1829,8 +1812,8 @@ namespace metilest2009
             // lblCoccoidrG
             // 
             this.lblCoccoidrG.AutoSize = true;
-            this.lblCoccoidrG.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lblCoccoidrG.Location = new System.Drawing.Point(90, 194);
+            this.lblCoccoidrG.ForeColor = System.Drawing.Color.LemonChiffon;
+            this.lblCoccoidrG.Location = new System.Drawing.Point(76, 194);
             this.lblCoccoidrG.Name = "lblCoccoidrG";
             this.lblCoccoidrG.Size = new System.Drawing.Size(67, 13);
             this.lblCoccoidrG.TabIndex = 37;
@@ -1839,8 +1822,8 @@ namespace metilest2009
             // lblPalmaAfrG
             // 
             this.lblPalmaAfrG.AutoSize = true;
-            this.lblPalmaAfrG.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lblPalmaAfrG.Location = new System.Drawing.Point(90, 103);
+            this.lblPalmaAfrG.ForeColor = System.Drawing.Color.LemonChiffon;
+            this.lblPalmaAfrG.Location = new System.Drawing.Point(76, 103);
             this.lblPalmaAfrG.Name = "lblPalmaAfrG";
             this.lblPalmaAfrG.Size = new System.Drawing.Size(67, 13);
             this.lblPalmaAfrG.TabIndex = 36;
@@ -1849,8 +1832,8 @@ namespace metilest2009
             // lblCoccoRaffG
             // 
             this.lblCoccoRaffG.AutoSize = true;
-            this.lblCoccoRaffG.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lblCoccoRaffG.Location = new System.Drawing.Point(90, 181);
+            this.lblCoccoRaffG.ForeColor = System.Drawing.Color.LemonChiffon;
+            this.lblCoccoRaffG.Location = new System.Drawing.Point(76, 181);
             this.lblCoccoRaffG.Name = "lblCoccoRaffG";
             this.lblCoccoRaffG.Size = new System.Drawing.Size(76, 13);
             this.lblCoccoRaffG.TabIndex = 35;
@@ -1859,8 +1842,8 @@ namespace metilest2009
             // lblPalmaSt48G
             // 
             this.lblPalmaSt48G.AutoSize = true;
-            this.lblPalmaSt48G.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lblPalmaSt48G.Location = new System.Drawing.Point(90, 155);
+            this.lblPalmaSt48G.ForeColor = System.Drawing.Color.LemonChiffon;
+            this.lblPalmaSt48G.Location = new System.Drawing.Point(76, 155);
             this.lblPalmaSt48G.Name = "lblPalmaSt48G";
             this.lblPalmaSt48G.Size = new System.Drawing.Size(62, 13);
             this.lblPalmaSt48G.TabIndex = 34;
@@ -1869,8 +1852,8 @@ namespace metilest2009
             // lblPalmaOle60G
             // 
             this.lblPalmaOle60G.AutoSize = true;
-            this.lblPalmaOle60G.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lblPalmaOle60G.Location = new System.Drawing.Point(90, 116);
+            this.lblPalmaOle60G.ForeColor = System.Drawing.Color.LemonChiffon;
+            this.lblPalmaOle60G.Location = new System.Drawing.Point(76, 116);
             this.lblPalmaOle60G.Name = "lblPalmaOle60G";
             this.lblPalmaOle60G.Size = new System.Drawing.Size(62, 13);
             this.lblPalmaOle60G.TabIndex = 33;
@@ -1879,8 +1862,8 @@ namespace metilest2009
             // lblPalmaRaffG
             // 
             this.lblPalmaRaffG.AutoSize = true;
-            this.lblPalmaRaffG.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lblPalmaRaffG.Location = new System.Drawing.Point(90, 90);
+            this.lblPalmaRaffG.ForeColor = System.Drawing.Color.LemonChiffon;
+            this.lblPalmaRaffG.Location = new System.Drawing.Point(76, 90);
             this.lblPalmaRaffG.Name = "lblPalmaRaffG";
             this.lblPalmaRaffG.Size = new System.Drawing.Size(74, 13);
             this.lblPalmaRaffG.TabIndex = 30;
@@ -1890,7 +1873,7 @@ namespace metilest2009
             // 
             this.lblSoiaRaffV.AutoSize = true;
             this.lblSoiaRaffV.ForeColor = System.Drawing.Color.ForestGreen;
-            this.lblSoiaRaffV.Location = new System.Drawing.Point(170, 259);
+            this.lblSoiaRaffV.Location = new System.Drawing.Point(156, 259);
             this.lblSoiaRaffV.Name = "lblSoiaRaffV";
             this.lblSoiaRaffV.Size = new System.Drawing.Size(65, 13);
             this.lblSoiaRaffV.TabIndex = 28;
@@ -1900,7 +1883,7 @@ namespace metilest2009
             // 
             this.lblPalmistoSTV.AutoSize = true;
             this.lblPalmistoSTV.ForeColor = System.Drawing.Color.ForestGreen;
-            this.lblPalmistoSTV.Location = new System.Drawing.Point(170, 233);
+            this.lblPalmistoSTV.Location = new System.Drawing.Point(156, 233);
             this.lblPalmistoSTV.Name = "lblPalmistoSTV";
             this.lblPalmistoSTV.Size = new System.Drawing.Size(77, 13);
             this.lblPalmistoSTV.TabIndex = 27;
@@ -1910,7 +1893,7 @@ namespace metilest2009
             // 
             this.lblPalmistoIV.AutoSize = true;
             this.lblPalmistoIV.ForeColor = System.Drawing.Color.ForestGreen;
-            this.lblPalmistoIV.Location = new System.Drawing.Point(170, 220);
+            this.lblPalmistoIV.Location = new System.Drawing.Point(156, 220);
             this.lblPalmistoIV.Name = "lblPalmistoIV";
             this.lblPalmistoIV.Size = new System.Drawing.Size(66, 13);
             this.lblPalmistoIV.TabIndex = 26;
@@ -1920,7 +1903,7 @@ namespace metilest2009
             // 
             this.lblPalmistoRV.AutoSize = true;
             this.lblPalmistoRV.ForeColor = System.Drawing.Color.ForestGreen;
-            this.lblPalmistoRV.Location = new System.Drawing.Point(170, 207);
+            this.lblPalmistoRV.Location = new System.Drawing.Point(156, 207);
             this.lblPalmistoRV.Name = "lblPalmistoRV";
             this.lblPalmistoRV.Size = new System.Drawing.Size(71, 13);
             this.lblPalmistoRV.TabIndex = 25;
@@ -1930,7 +1913,7 @@ namespace metilest2009
             // 
             this.lblCoccoidrV.AutoSize = true;
             this.lblCoccoidrV.ForeColor = System.Drawing.Color.ForestGreen;
-            this.lblCoccoidrV.Location = new System.Drawing.Point(170, 194);
+            this.lblCoccoidrV.Location = new System.Drawing.Point(156, 194);
             this.lblCoccoidrV.Name = "lblCoccoidrV";
             this.lblCoccoidrV.Size = new System.Drawing.Size(66, 13);
             this.lblCoccoidrV.TabIndex = 24;
@@ -1940,7 +1923,7 @@ namespace metilest2009
             // 
             this.lblPalmaAfrV.AutoSize = true;
             this.lblPalmaAfrV.ForeColor = System.Drawing.Color.ForestGreen;
-            this.lblPalmaAfrV.Location = new System.Drawing.Point(170, 103);
+            this.lblPalmaAfrV.Location = new System.Drawing.Point(156, 103);
             this.lblPalmaAfrV.Name = "lblPalmaAfrV";
             this.lblPalmaAfrV.Size = new System.Drawing.Size(66, 13);
             this.lblPalmaAfrV.TabIndex = 23;
@@ -1950,7 +1933,7 @@ namespace metilest2009
             // 
             this.lblCoccoRaffV.AutoSize = true;
             this.lblCoccoRaffV.ForeColor = System.Drawing.Color.ForestGreen;
-            this.lblCoccoRaffV.Location = new System.Drawing.Point(170, 181);
+            this.lblCoccoRaffV.Location = new System.Drawing.Point(156, 181);
             this.lblCoccoRaffV.Name = "lblCoccoRaffV";
             this.lblCoccoRaffV.Size = new System.Drawing.Size(75, 13);
             this.lblCoccoRaffV.TabIndex = 22;
@@ -1960,7 +1943,7 @@ namespace metilest2009
             // 
             this.lblPalmaSt48V.AutoSize = true;
             this.lblPalmaSt48V.ForeColor = System.Drawing.Color.ForestGreen;
-            this.lblPalmaSt48V.Location = new System.Drawing.Point(170, 155);
+            this.lblPalmaSt48V.Location = new System.Drawing.Point(156, 155);
             this.lblPalmaSt48V.Name = "lblPalmaSt48V";
             this.lblPalmaSt48V.Size = new System.Drawing.Size(61, 13);
             this.lblPalmaSt48V.TabIndex = 21;
@@ -1970,7 +1953,7 @@ namespace metilest2009
             // 
             this.lblPalmaOle60V.AutoSize = true;
             this.lblPalmaOle60V.ForeColor = System.Drawing.Color.ForestGreen;
-            this.lblPalmaOle60V.Location = new System.Drawing.Point(170, 116);
+            this.lblPalmaOle60V.Location = new System.Drawing.Point(156, 116);
             this.lblPalmaOle60V.Name = "lblPalmaOle60V";
             this.lblPalmaOle60V.Size = new System.Drawing.Size(61, 13);
             this.lblPalmaOle60V.TabIndex = 20;
@@ -1980,80 +1963,20 @@ namespace metilest2009
             // 
             this.lblPalmaRaffV.AutoSize = true;
             this.lblPalmaRaffV.ForeColor = System.Drawing.Color.ForestGreen;
-            this.lblPalmaRaffV.Location = new System.Drawing.Point(170, 90);
+            this.lblPalmaRaffV.Location = new System.Drawing.Point(156, 90);
             this.lblPalmaRaffV.Name = "lblPalmaRaffV";
             this.lblPalmaRaffV.Size = new System.Drawing.Size(73, 13);
             this.lblPalmaRaffV.TabIndex = 17;
             this.lblPalmaRaffV.Text = "lblPalmaRaffV";
-            // 
-            // lblXV
-            // 
-            this.lblXV.AutoSize = true;
-            this.lblXV.ForeColor = System.Drawing.Color.ForestGreen;
-            this.lblXV.Location = new System.Drawing.Point(170, 467);
-            this.lblXV.Name = "lblXV";
-            this.lblXV.Size = new System.Drawing.Size(31, 13);
-            this.lblXV.TabIndex = 67;
-            this.lblXV.Text = "lblXV";
-            // 
-            // lblYV
-            // 
-            this.lblYV.AutoSize = true;
-            this.lblYV.ForeColor = System.Drawing.Color.ForestGreen;
-            this.lblYV.Location = new System.Drawing.Point(170, 480);
-            this.lblYV.Name = "lblYV";
-            this.lblYV.Size = new System.Drawing.Size(31, 13);
-            this.lblYV.TabIndex = 67;
-            this.lblYV.Text = "lblYV";
-            // 
-            // lblZV
-            // 
-            this.lblZV.AutoSize = true;
-            this.lblZV.ForeColor = System.Drawing.Color.ForestGreen;
-            this.lblZV.Location = new System.Drawing.Point(170, 493);
-            this.lblZV.Name = "lblZV";
-            this.lblZV.Size = new System.Drawing.Size(31, 13);
-            this.lblZV.TabIndex = 67;
-            this.lblZV.Text = "lblZV";
-            // 
-            // lblXG
-            // 
-            this.lblXG.AutoSize = true;
-            this.lblXG.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lblXG.Location = new System.Drawing.Point(90, 467);
-            this.lblXG.Name = "lblXG";
-            this.lblXG.Size = new System.Drawing.Size(32, 13);
-            this.lblXG.TabIndex = 80;
-            this.lblXG.Text = "lblXG";
-            // 
-            // lblYG
-            // 
-            this.lblYG.AutoSize = true;
-            this.lblYG.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lblYG.Location = new System.Drawing.Point(90, 480);
-            this.lblYG.Name = "lblYG";
-            this.lblYG.Size = new System.Drawing.Size(32, 13);
-            this.lblYG.TabIndex = 80;
-            this.lblYG.Text = "lblYG";
-            // 
-            // lblZG
-            // 
-            this.lblZG.AutoSize = true;
-            this.lblZG.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lblZG.Location = new System.Drawing.Point(90, 493);
-            this.lblZG.Name = "lblZG";
-            this.lblZG.Size = new System.Drawing.Size(32, 13);
-            this.lblZG.TabIndex = 80;
-            this.lblZG.Text = "lblZG";
             // 
             // label16
             // 
             this.label16.AutoSize = true;
             this.label16.Location = new System.Drawing.Point(10, 259);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(31, 13);
+            this.label16.Size = new System.Drawing.Size(52, 13);
             this.label16.TabIndex = 15;
-            this.label16.Text = "Soia:";
+            this.label16.Text = "Soia raff.:";
             // 
             // label15
             // 
@@ -2069,36 +1992,36 @@ namespace metilest2009
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(10, 220);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(78, 13);
+            this.label14.Size = new System.Drawing.Size(57, 13);
             this.label14.TabIndex = 13;
-            this.label14.Text = "Palmisto idrog.:";
+            this.label14.Text = "Palmisto i.:";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(10, 207);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(49, 13);
+            this.label13.Size = new System.Drawing.Size(58, 13);
             this.label13.TabIndex = 12;
-            this.label13.Text = "Palmisto:";
+            this.label13.Text = "Palmisto r.:";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(10, 194);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(70, 13);
+            this.label12.Size = new System.Drawing.Size(58, 13);
             this.label12.TabIndex = 11;
-            this.label12.Text = "Cocco idrog.:";
+            this.label12.Text = "Cocco idr.:";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(10, 181);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(41, 13);
+            this.label11.Size = new System.Drawing.Size(62, 13);
             this.label11.TabIndex = 10;
-            this.label11.Text = "Cocco:";
+            this.label11.Text = "Cocco raff.:";
             // 
             // label10
             // 
@@ -2132,9 +2055,9 @@ namespace metilest2009
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(10, 90);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(39, 13);
+            this.label5.Size = new System.Drawing.Size(60, 13);
             this.label5.TabIndex = 4;
-            this.label5.Text = "Palma:";
+            this.label5.Text = "Palma raff.:";
             // 
             // label4
             // 
@@ -2172,32 +2095,15 @@ namespace metilest2009
             this.label1.TabIndex = 0;
             this.label1.Text = "Miscelazione simulata e % step";
             // 
-            // label6
+            // button1
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(10, 467);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(17, 13);
-            this.label6.TabIndex = 214;
-            this.label6.Text = "X:";
-            // 
-            // label63
-            // 
-            this.label63.AutoSize = true;
-            this.label63.Location = new System.Drawing.Point(10, 480);
-            this.label63.Name = "label63";
-            this.label63.Size = new System.Drawing.Size(17, 13);
-            this.label63.TabIndex = 215;
-            this.label63.Text = "Y:";
-            // 
-            // label64
-            // 
-            this.label64.AutoSize = true;
-            this.label64.Location = new System.Drawing.Point(10, 493);
-            this.label64.Name = "label64";
-            this.label64.Size = new System.Drawing.Size(17, 13);
-            this.label64.TabIndex = 216;
-            this.label64.Text = "Z:";
+            this.button1.Location = new System.Drawing.Point(137, 513);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(151, 23);
+            this.button1.TabIndex = 213;
+            this.button1.Text = "Aggiorna visualizzazione";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Elaborazione
             // 
@@ -2265,13 +2171,7 @@ namespace metilest2009
         private System.Windows.Forms.Label lblNocciolaG;
         private System.Windows.Forms.Label lblBrurroV;
         private System.Windows.Forms.Label lblSegoRaffV;
-		private System.Windows.Forms.Label lblXV;
-		private System.Windows.Forms.Label lblYV;
-		private System.Windows.Forms.Label lblZV;
-		private System.Windows.Forms.Label lblXG;
-		private System.Windows.Forms.Label lblYG;
-		private System.Windows.Forms.Label lblZG;
-		private System.Windows.Forms.Label lblStruttoV;
+        private System.Windows.Forms.Label lblStruttoV;
         private System.Windows.Forms.Label lblBurroCacaoV;
         private System.Windows.Forms.Label lblOlivaV;
         private System.Windows.Forms.Label lblGirasoleAOleV;
@@ -2396,11 +2296,10 @@ namespace metilest2009
         private System.Windows.Forms.Label lblBabassuV;
         private System.Windows.Forms.Label label54;
         private System.Windows.Forms.Label lblNIodio;
+        private System.Windows.Forms.ComboBox cmPriorita;
         private System.Windows.Forms.Button btnStop;
+        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label64;
-        private System.Windows.Forms.Label label63;
-        private System.Windows.Forms.Label label6;
     }
 }

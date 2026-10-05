@@ -44,10 +44,6 @@ namespace metilest2009
         {
             InitializeComponent();
             cmbStepPercent.SelectedIndex = 0;
-			
-			//inizializza la form di controllo della licenza
-			Form FormLicenza = new GestoreLicenza();
-			FormLicenza.Activate();
             LoadSTD();
         }
 
@@ -378,12 +374,6 @@ namespace metilest2009
             FormInfo.Show();
         }
 		
-		private void LicenceToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form FormLicenza = new GestoreLicenza();
-            FormLicenza.Show();
-        }
-
         private void btnClsGrassi_Click(object sender, EventArgs e)
         {
             ClearTextControls(flowLayoutPanel2);

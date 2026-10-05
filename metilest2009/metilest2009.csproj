@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="15.0">
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.21022</ProductVersion>
+    <ProductVersion>8.0.50727</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{E1ACF8B8-4F99-4F33-97E2-ACDE984693F4}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>metilest2</RootNamespace>
-    <AssemblyName>metilest2</AssemblyName>
+    <RootNamespace>metilest2009</RootNamespace>
+    <AssemblyName>metilest2009</AssemblyName>
     <ManifestCertificateThumbprint>A3413547EF5AC525AFD2301A0EA6FB49198D2E29</ManifestCertificateThumbprint>
     <ManifestKeyFile>metilest2009_TemporaryKey.pfx</ManifestKeyFile>
     <GenerateManifests>true</GenerateManifests>
@@ -31,7 +31,7 @@
     <BootstrapperEnabled>true</BootstrapperEnabled>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
-    <OldToolsVersion>3.5</OldToolsVersion>
+    <OldToolsVersion>2.0</OldToolsVersion>
     <ApplicationRevision>0</ApplicationRevision>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <UpgradeBackupLocation>
@@ -80,22 +80,28 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="cli_basetypes">
+    <Reference Include="cli_basetypes, Version=1.0.13.0, Culture=neutral, PublicKeyToken=ce2cb7e279207b9e">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\dllopenoffice\cli_basetypes.dll</HintPath>
     </Reference>
-    <Reference Include="cli_cppuhelper">
+    <Reference Include="cli_cppuhelper, Version=1.0.16.0, Culture=neutral, PublicKeyToken=ce2cb7e279207b9e">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\dllopenoffice\cli_cppuhelper.dll</HintPath>
     </Reference>
-    <Reference Include="cli_oootypes">
+    <Reference Include="cli_oootypes, Version=1.0.2.0, Culture=neutral, PublicKeyToken=ce2cb7e279207b9e">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\dllopenoffice\cli_oootypes.dll</HintPath>
     </Reference>
-    <Reference Include="cli_uno">
+    <Reference Include="cli_uno, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\dllopenoffice\cli_uno.dll</HintPath>
     </Reference>
-    <Reference Include="cli_ure">
+    <Reference Include="cli_ure, Version=1.0.16.0, Culture=neutral, PublicKeyToken=ce2cb7e279207b9e">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\dllopenoffice\cli_ure.dll</HintPath>
     </Reference>
-    <Reference Include="cli_uretypes">
+    <Reference Include="cli_uretypes, Version=1.0.2.0, Culture=neutral, PublicKeyToken=ce2cb7e279207b9e">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\dllopenoffice\cli_uretypes.dll</HintPath>
     </Reference>
   </ItemGroup>
@@ -140,7 +146,6 @@
       <DependentUpon>Standard.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <None Include="app.config" />
     <None Include="metilest2009_TemporaryKey.pfx" />
     <Compile Include="Report.cs">
       <SubType>Form</SubType>
@@ -156,8 +161,7 @@
     </Compile>
 
   </ItemGroup>
-  <!--
-  <ItemGroup>
+  <!---<ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
       <Visible>False</Visible>
     </BootstrapperPackage>

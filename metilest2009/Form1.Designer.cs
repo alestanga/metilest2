@@ -1,21 +1,3 @@
-/*
-  Copyright 2009-2015 Alessandro Stanga
-  This file is part of metilest2.
-
-   metilest2 is free software: you can redistribute it and/or modify
-   it under the terms of the GNU General Public License as published by
-   the Free Software Foundation, either version 3 of the License, or
-   (at your option) any later version.
-
-   metilest2 is distributed in the hope that it will be useful,
-   but WITHOUT ANY WARRANTY; without even the implied warranty of
-   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-   GNU General Public License for more details.
-
-   You should have received a copy of the GNU General Public License
-   along with metilest2.  If not, see <http://www.gnu.org/licenses/>.
-*/
-
 namespace metilest2009
 {
     partial class InsermentoDati
@@ -47,21 +29,10 @@ namespace metilest2009
         private void InitializeComponent()
         {
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btnClsGrassi = new System.Windows.Forms.Button();
-            this.btnElabora = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.esciToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.visualizzaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tabellaDegliStandardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.utilityToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ricaricaGliStandardDaFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aiutoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-
-
-            this.cmbStepPercent = new System.Windows.Forms.ToolStripComboBox();
+            this.stepperc = new System.Windows.Forms.MaskedTextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -262,24 +233,8 @@ namespace metilest2009
             this.txtSegoRafMin = new System.Windows.Forms.MaskedTextBox();
             this.groupBox83 = new System.Windows.Forms.GroupBox();
             this.txtSegoRafMax = new System.Windows.Forms.MaskedTextBox();
-            this.groupBoxX = new System.Windows.Forms.GroupBox();
-            this.groupBoxXMin = new System.Windows.Forms.GroupBox();
-            this.txtXMin = new System.Windows.Forms.MaskedTextBox();
-            this.groupBoxXMax = new System.Windows.Forms.GroupBox();
-            this.txtXMax = new System.Windows.Forms.MaskedTextBox();
-            this.groupBoxY = new System.Windows.Forms.GroupBox();
-            this.groupBoxYMin = new System.Windows.Forms.GroupBox();
-            this.txtYMin = new System.Windows.Forms.MaskedTextBox();
-            this.groupBoxYMax = new System.Windows.Forms.GroupBox();
-            this.txtYMax = new System.Windows.Forms.MaskedTextBox();
-            this.groupBoxZ = new System.Windows.Forms.GroupBox();
-            this.groupBoxZMin = new System.Windows.Forms.GroupBox();
-            this.txtZMin = new System.Windows.Forms.MaskedTextBox();
-            this.groupBoxZMax = new System.Windows.Forms.GroupBox();
-            this.txtZMax = new System.Windows.Forms.MaskedTextBox();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -399,160 +354,64 @@ namespace metilest2009
             this.groupBox81.SuspendLayout();
             this.groupBox82.SuspendLayout();
             this.groupBox83.SuspendLayout();
-            this.groupBoxX.SuspendLayout();
-            this.groupBoxXMin.SuspendLayout();
-            this.groupBoxXMax.SuspendLayout();
-            this.groupBoxY.SuspendLayout();
-            this.groupBoxYMin.SuspendLayout();
-            this.groupBoxYMax.SuspendLayout();
-            this.groupBoxZ.SuspendLayout();
-            this.groupBoxZMin.SuspendLayout();
-            this.groupBoxZMax.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.LightYellow;
-            this.panel3.Controls.Add(this.btnClsGrassi);
-            this.panel3.Controls.Add(this.btnElabora);
+            this.panel3.Controls.Add(this.button1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 636);
+            this.panel3.Location = new System.Drawing.Point(0, 616);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(810, 24);
+            this.panel3.Size = new System.Drawing.Size(810, 44);
             this.panel3.TabIndex = 10;
             // 
-            // btnClsGrassi
+            // button1
             // 
-            this.btnClsGrassi.BackColor = System.Drawing.Color.Orange;
-            this.btnClsGrassi.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnClsGrassi.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClsGrassi.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.btnClsGrassi.Location = new System.Drawing.Point(626, 0);
-            this.btnClsGrassi.Name = "btnClsGrassi";
-            this.btnClsGrassi.Size = new System.Drawing.Size(126, 24);
-            this.btnClsGrassi.TabIndex = 1;
-            this.btnClsGrassi.Text = "Azzera valori grassi";
-            this.btnClsGrassi.UseVisualStyleBackColor = false;
-            this.btnClsGrassi.Click += new System.EventHandler(this.btnClsGrassi_Click);
-            // 
-            // btnElabora
-            // 
-            this.btnElabora.BackColor = System.Drawing.Color.PaleGreen;
-            this.btnElabora.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnElabora.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnElabora.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.btnElabora.Location = new System.Drawing.Point(752, 0);
-            this.btnElabora.Name = "btnElabora";
-            this.btnElabora.Size = new System.Drawing.Size(58, 24);
-            this.btnElabora.TabIndex = 0;
-            this.btnElabora.Text = "Elabora";
-            this.btnElabora.UseVisualStyleBackColor = false;
-            this.btnElabora.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Location = new System.Drawing.Point(369, 9);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(58, 23);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Elabora";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.panel4.Controls.Add(this.menuStrip1);
+            this.panel4.Controls.Add(this.stepperc);
+            this.panel4.Controls.Add(this.label1);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(810, 25);
+            this.panel4.Size = new System.Drawing.Size(810, 37);
             this.panel4.TabIndex = 0;
+            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
-            // menuStrip1
+            // stepperc
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1,
-            this.visualizzaToolStripMenuItem,
-            this.utilityToolStripMenuItem,
-            this.aiutoToolStripMenuItem,
-            this.cmbStepPercent});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(810, 25);
-            this.menuStrip1.TabIndex = 2;
-            this.menuStrip1.Text = "menuStrip1";
+            this.stepperc.Location = new System.Drawing.Point(283, 6);
+            this.stepperc.Mask = "99";
+            this.stepperc.Name = "stepperc";
+            this.stepperc.Size = new System.Drawing.Size(27, 20);
+            this.stepperc.TabIndex = 0;
+            this.stepperc.Text = " 1";
             // 
-            // toolStripMenuItem1
+            // label1
             // 
-            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.esciToolStripMenuItem});
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(35, 21);
-            this.toolStripMenuItem1.Text = "&File";
-            // 
-            // esciToolStripMenuItem
-            // 
-            this.esciToolStripMenuItem.Name = "esciToolStripMenuItem";
-            this.esciToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
-            this.esciToolStripMenuItem.Text = "&Esci";
-            this.esciToolStripMenuItem.Click += new System.EventHandler(this.esciToolStripMenuItem_Click);
-            // 
-            // visualizzaToolStripMenuItem
-            // 
-            this.visualizzaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tabellaDegliStandardToolStripMenuItem});
-            this.visualizzaToolStripMenuItem.Name = "visualizzaToolStripMenuItem";
-            this.visualizzaToolStripMenuItem.Size = new System.Drawing.Size(64, 21);
-            this.visualizzaToolStripMenuItem.Text = "&Visualizza";
-            // 
-            // tabellaDegliStandardToolStripMenuItem
-            // 
-            this.tabellaDegliStandardToolStripMenuItem.Name = "tabellaDegliStandardToolStripMenuItem";
-            this.tabellaDegliStandardToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
-            this.tabellaDegliStandardToolStripMenuItem.Text = "&Tabella degli standard";
-            this.tabellaDegliStandardToolStripMenuItem.Click += new System.EventHandler(this.tabellaDegliStandardToolStripMenuItem_Click);
-            // 
-            // utilityToolStripMenuItem
-            // 
-            this.utilityToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ricaricaGliStandardDaFileToolStripMenuItem});
-            this.utilityToolStripMenuItem.Name = "utilityToolStripMenuItem";
-            this.utilityToolStripMenuItem.Size = new System.Drawing.Size(46, 21);
-            this.utilityToolStripMenuItem.Text = "Utility";
-            // 
-            // ricaricaGliStandardDaFileToolStripMenuItem
-            // 
-            this.ricaricaGliStandardDaFileToolStripMenuItem.Name = "ricaricaGliStandardDaFileToolStripMenuItem";
-            this.ricaricaGliStandardDaFileToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
-            this.ricaricaGliStandardDaFileToolStripMenuItem.Text = "Rileggi file degli standard";
-            this.ricaricaGliStandardDaFileToolStripMenuItem.Click += new System.EventHandler(this.ricaricaGliStandardDaFileToolStripMenuItem_Click);
-            // 
-            // aiutoToolStripMenuItem
-            // 
-            this.aiutoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.infoToolStripMenuItem});
-            this.aiutoToolStripMenuItem.Name = "aiutoToolStripMenuItem";
-            this.aiutoToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
-            this.aiutoToolStripMenuItem.Text = "Aiuto";
-            // 
-            // infoToolStripMenuItem
-            // 
-            this.infoToolStripMenuItem.Name = "infoToolStripMenuItem";
-            this.infoToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
-            this.infoToolStripMenuItem.Text = "Info";
-            this.infoToolStripMenuItem.Click += new System.EventHandler(this.infoToolStripMenuItem_Click);
-            // 
-            // cmbStepPercent
-            // 
-            this.cmbStepPercent.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.cmbStepPercent.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbStepPercent.Items.AddRange(new object[] {
-            "Step 1%",
-            "Step 2%",
-            "Step 5%",
-            "Step 10%",
-            "Step 20%"});
-            this.cmbStepPercent.Name = "cmbStepPercent";
-            this.cmbStepPercent.Size = new System.Drawing.Size(121, 21);
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(207, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(80, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Step (1,2,5,20):";
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.splitContainer1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 25);
+            this.panel1.Location = new System.Drawing.Point(0, 37);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(810, 611);
+            this.panel1.Size = new System.Drawing.Size(810, 579);
             this.panel1.TabIndex = 2;
             // 
             // splitContainer1
@@ -569,7 +428,7 @@ namespace metilest2009
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.panel5);
-            this.splitContainer1.Size = new System.Drawing.Size(810, 611);
+            this.splitContainer1.Size = new System.Drawing.Size(810, 579);
             this.splitContainer1.SplitterDistance = 191;
             this.splitContainer1.TabIndex = 10;
             // 
@@ -579,13 +438,12 @@ namespace metilest2009
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(189, 609);
+            this.panel2.Size = new System.Drawing.Size(189, 577);
             this.panel2.TabIndex = 1;
             // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.AntiqueWhite;
             this.flowLayoutPanel1.Controls.Add(this.label3);
             this.flowLayoutPanel1.Controls.Add(this.groupBox98);
             this.flowLayoutPanel1.Controls.Add(this.groupBox87);
@@ -615,7 +473,7 @@ namespace metilest2009
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(189, 609);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(189, 577);
             this.flowLayoutPanel1.TabIndex = 1;
             this.flowLayoutPanel1.WrapContents = false;
             // 
@@ -626,17 +484,14 @@ namespace metilest2009
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(3, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(152, 26);
+            this.label3.Size = new System.Drawing.Size(156, 26);
             this.label3.TabIndex = 44;
             this.label3.Text = "Valore gascromatografia acidi grassi";
             // 
             // groupBox98
             // 
-            this.groupBox98.BackColor = System.Drawing.Color.LightSteelBlue;
             this.groupBox98.Controls.Add(this.txtC4);
-            this.groupBox98.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox98.Location = new System.Drawing.Point(1, 27);
-            this.groupBox98.Margin = new System.Windows.Forms.Padding(1);
+            this.groupBox98.Location = new System.Drawing.Point(3, 29);
             this.groupBox98.Name = "groupBox98";
             this.groupBox98.Size = new System.Drawing.Size(156, 40);
             this.groupBox98.TabIndex = 0;
@@ -645,19 +500,16 @@ namespace metilest2009
             // 
             // txtC4
             // 
-            this.txtC4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtC4.Location = new System.Drawing.Point(6, 12);
+            this.txtC4.Mask = "99.99";
             this.txtC4.Name = "txtC4";
             this.txtC4.Size = new System.Drawing.Size(143, 20);
             this.txtC4.TabIndex = 0;
             // 
             // groupBox87
             // 
-            this.groupBox87.BackColor = System.Drawing.Color.LightSteelBlue;
             this.groupBox87.Controls.Add(this.txtC6);
-            this.groupBox87.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox87.Location = new System.Drawing.Point(1, 69);
-            this.groupBox87.Margin = new System.Windows.Forms.Padding(1);
+            this.groupBox87.Location = new System.Drawing.Point(3, 75);
             this.groupBox87.Name = "groupBox87";
             this.groupBox87.Size = new System.Drawing.Size(156, 40);
             this.groupBox87.TabIndex = 1;
@@ -666,19 +518,16 @@ namespace metilest2009
             // 
             // txtC6
             // 
-            this.txtC6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtC6.Location = new System.Drawing.Point(6, 12);
+            this.txtC6.Mask = "99.99";
             this.txtC6.Name = "txtC6";
             this.txtC6.Size = new System.Drawing.Size(143, 20);
             this.txtC6.TabIndex = 0;
             // 
             // groupBox88
             // 
-            this.groupBox88.BackColor = System.Drawing.Color.LightSteelBlue;
             this.groupBox88.Controls.Add(this.txtC8);
-            this.groupBox88.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox88.Location = new System.Drawing.Point(1, 111);
-            this.groupBox88.Margin = new System.Windows.Forms.Padding(1);
+            this.groupBox88.Location = new System.Drawing.Point(3, 121);
             this.groupBox88.Name = "groupBox88";
             this.groupBox88.Size = new System.Drawing.Size(156, 40);
             this.groupBox88.TabIndex = 2;
@@ -687,19 +536,16 @@ namespace metilest2009
             // 
             // txtC8
             // 
-            this.txtC8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtC8.Location = new System.Drawing.Point(6, 14);
+            this.txtC8.Mask = "99.99";
             this.txtC8.Name = "txtC8";
             this.txtC8.Size = new System.Drawing.Size(143, 20);
             this.txtC8.TabIndex = 0;
             // 
             // groupBox89
             // 
-            this.groupBox89.BackColor = System.Drawing.Color.LightSteelBlue;
             this.groupBox89.Controls.Add(this.txtC10);
-            this.groupBox89.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox89.Location = new System.Drawing.Point(1, 153);
-            this.groupBox89.Margin = new System.Windows.Forms.Padding(1);
+            this.groupBox89.Location = new System.Drawing.Point(3, 167);
             this.groupBox89.Name = "groupBox89";
             this.groupBox89.Size = new System.Drawing.Size(156, 40);
             this.groupBox89.TabIndex = 3;
@@ -708,19 +554,16 @@ namespace metilest2009
             // 
             // txtC10
             // 
-            this.txtC10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtC10.Location = new System.Drawing.Point(6, 14);
+            this.txtC10.Mask = "99.99";
             this.txtC10.Name = "txtC10";
             this.txtC10.Size = new System.Drawing.Size(143, 20);
             this.txtC10.TabIndex = 0;
             // 
             // groupBox2
             // 
-            this.groupBox2.BackColor = System.Drawing.Color.LightSteelBlue;
             this.groupBox2.Controls.Add(this.txtC12);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(1, 195);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(1);
+            this.groupBox2.Location = new System.Drawing.Point(3, 213);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(156, 40);
             this.groupBox2.TabIndex = 4;
@@ -729,19 +572,16 @@ namespace metilest2009
             // 
             // txtC12
             // 
-            this.txtC12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtC12.Location = new System.Drawing.Point(6, 14);
+            this.txtC12.Mask = "99.99";
             this.txtC12.Name = "txtC12";
             this.txtC12.Size = new System.Drawing.Size(143, 20);
             this.txtC12.TabIndex = 0;
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.LightSteelBlue;
             this.groupBox1.Controls.Add(this.txtC14);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(1, 237);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(1);
+            this.groupBox1.Location = new System.Drawing.Point(3, 259);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(156, 40);
             this.groupBox1.TabIndex = 5;
@@ -750,19 +590,16 @@ namespace metilest2009
             // 
             // txtC14
             // 
-            this.txtC14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtC14.Location = new System.Drawing.Point(7, 14);
+            this.txtC14.Mask = "99.99";
             this.txtC14.Name = "txtC14";
             this.txtC14.Size = new System.Drawing.Size(142, 20);
             this.txtC14.TabIndex = 1;
             // 
             // groupBox108
             // 
-            this.groupBox108.BackColor = System.Drawing.Color.LightSteelBlue;
             this.groupBox108.Controls.Add(this.txtC14m);
-            this.groupBox108.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox108.Location = new System.Drawing.Point(1, 279);
-            this.groupBox108.Margin = new System.Windows.Forms.Padding(1);
+            this.groupBox108.Location = new System.Drawing.Point(3, 305);
             this.groupBox108.Name = "groupBox108";
             this.groupBox108.Size = new System.Drawing.Size(156, 40);
             this.groupBox108.TabIndex = 6;
@@ -771,19 +608,16 @@ namespace metilest2009
             // 
             // txtC14m
             // 
-            this.txtC14m.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtC14m.Location = new System.Drawing.Point(7, 14);
+            this.txtC14m.Mask = "99.99";
             this.txtC14m.Name = "txtC14m";
             this.txtC14m.Size = new System.Drawing.Size(142, 20);
             this.txtC14m.TabIndex = 1;
             // 
             // groupBox90
             // 
-            this.groupBox90.BackColor = System.Drawing.Color.LightSteelBlue;
             this.groupBox90.Controls.Add(this.txtC15);
-            this.groupBox90.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox90.Location = new System.Drawing.Point(1, 321);
-            this.groupBox90.Margin = new System.Windows.Forms.Padding(1);
+            this.groupBox90.Location = new System.Drawing.Point(3, 351);
             this.groupBox90.Name = "groupBox90";
             this.groupBox90.Size = new System.Drawing.Size(156, 40);
             this.groupBox90.TabIndex = 7;
@@ -792,19 +626,16 @@ namespace metilest2009
             // 
             // txtC15
             // 
-            this.txtC15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtC15.Location = new System.Drawing.Point(6, 14);
+            this.txtC15.Mask = "99.99";
             this.txtC15.Name = "txtC15";
             this.txtC15.Size = new System.Drawing.Size(143, 20);
             this.txtC15.TabIndex = 0;
             // 
             // groupBox91
             // 
-            this.groupBox91.BackColor = System.Drawing.Color.LightSteelBlue;
             this.groupBox91.Controls.Add(this.txtC16ISO);
-            this.groupBox91.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox91.Location = new System.Drawing.Point(1, 363);
-            this.groupBox91.Margin = new System.Windows.Forms.Padding(1);
+            this.groupBox91.Location = new System.Drawing.Point(3, 397);
             this.groupBox91.Name = "groupBox91";
             this.groupBox91.Size = new System.Drawing.Size(156, 40);
             this.groupBox91.TabIndex = 8;
@@ -813,19 +644,16 @@ namespace metilest2009
             // 
             // txtC16ISO
             // 
-            this.txtC16ISO.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtC16ISO.Location = new System.Drawing.Point(7, 14);
+            this.txtC16ISO.Mask = "99.99";
             this.txtC16ISO.Name = "txtC16ISO";
             this.txtC16ISO.Size = new System.Drawing.Size(142, 20);
             this.txtC16ISO.TabIndex = 1;
             // 
             // groupBox3
             // 
-            this.groupBox3.BackColor = System.Drawing.Color.LightSteelBlue;
             this.groupBox3.Controls.Add(this.txtC16);
-            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(1, 405);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(1);
+            this.groupBox3.Location = new System.Drawing.Point(3, 443);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(156, 40);
             this.groupBox3.TabIndex = 9;
@@ -834,19 +662,16 @@ namespace metilest2009
             // 
             // txtC16
             // 
-            this.txtC16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtC16.Location = new System.Drawing.Point(7, 14);
+            this.txtC16.Mask = "99.99";
             this.txtC16.Name = "txtC16";
             this.txtC16.Size = new System.Drawing.Size(142, 20);
             this.txtC16.TabIndex = 1;
             // 
             // groupBox4
             // 
-            this.groupBox4.BackColor = System.Drawing.Color.LightSteelBlue;
             this.groupBox4.Controls.Add(this.txtC16m);
-            this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(1, 447);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(1);
+            this.groupBox4.Location = new System.Drawing.Point(3, 489);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(156, 40);
             this.groupBox4.TabIndex = 10;
@@ -855,40 +680,34 @@ namespace metilest2009
             // 
             // txtC16m
             // 
-            this.txtC16m.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtC16m.Location = new System.Drawing.Point(7, 14);
+            this.txtC16m.Mask = "99.99";
             this.txtC16m.Name = "txtC16m";
             this.txtC16m.Size = new System.Drawing.Size(142, 20);
             this.txtC16m.TabIndex = 1;
             // 
             // groupBox109
             // 
-            this.groupBox109.BackColor = System.Drawing.Color.LightSteelBlue;
             this.groupBox109.Controls.Add(this.txtC17ISO);
-            this.groupBox109.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox109.Location = new System.Drawing.Point(1, 489);
-            this.groupBox109.Margin = new System.Windows.Forms.Padding(1);
+            this.groupBox109.Location = new System.Drawing.Point(3, 535);
             this.groupBox109.Name = "groupBox109";
             this.groupBox109.Size = new System.Drawing.Size(156, 40);
             this.groupBox109.TabIndex = 11;
             this.groupBox109.TabStop = false;
-            this.groupBox109.Text = "C17:ISO Eptada. Ram.";
+            this.groupBox109.Text = "C17:ISO Eptadecanoico Ramificato";
             // 
             // txtC17ISO
             // 
-            this.txtC17ISO.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtC17ISO.Location = new System.Drawing.Point(7, 14);
+            this.txtC17ISO.Mask = "99.99";
             this.txtC17ISO.Name = "txtC17ISO";
             this.txtC17ISO.Size = new System.Drawing.Size(142, 20);
             this.txtC17ISO.TabIndex = 11;
             // 
             // groupBox92
             // 
-            this.groupBox92.BackColor = System.Drawing.Color.LightSteelBlue;
             this.groupBox92.Controls.Add(this.txtC17);
-            this.groupBox92.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox92.Location = new System.Drawing.Point(1, 531);
-            this.groupBox92.Margin = new System.Windows.Forms.Padding(1);
+            this.groupBox92.Location = new System.Drawing.Point(3, 581);
             this.groupBox92.Name = "groupBox92";
             this.groupBox92.Size = new System.Drawing.Size(156, 40);
             this.groupBox92.TabIndex = 12;
@@ -897,19 +716,16 @@ namespace metilest2009
             // 
             // txtC17
             // 
-            this.txtC17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtC17.Location = new System.Drawing.Point(7, 14);
+            this.txtC17.Mask = "99.99";
             this.txtC17.Name = "txtC17";
             this.txtC17.Size = new System.Drawing.Size(142, 20);
             this.txtC17.TabIndex = 1;
             // 
             // groupBox110
             // 
-            this.groupBox110.BackColor = System.Drawing.Color.LightSteelBlue;
             this.groupBox110.Controls.Add(this.txtC17m);
-            this.groupBox110.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox110.Location = new System.Drawing.Point(1, 573);
-            this.groupBox110.Margin = new System.Windows.Forms.Padding(1);
+            this.groupBox110.Location = new System.Drawing.Point(3, 627);
             this.groupBox110.Name = "groupBox110";
             this.groupBox110.Size = new System.Drawing.Size(156, 40);
             this.groupBox110.TabIndex = 13;
@@ -918,19 +734,16 @@ namespace metilest2009
             // 
             // txtC17m
             // 
-            this.txtC17m.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtC17m.Location = new System.Drawing.Point(7, 14);
+            this.txtC17m.Mask = "99.99";
             this.txtC17m.Name = "txtC17m";
             this.txtC17m.Size = new System.Drawing.Size(142, 20);
             this.txtC17m.TabIndex = 1;
             // 
             // groupBox5
             // 
-            this.groupBox5.BackColor = System.Drawing.Color.LightSteelBlue;
             this.groupBox5.Controls.Add(this.txtC18);
-            this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox5.Location = new System.Drawing.Point(1, 615);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(1);
+            this.groupBox5.Location = new System.Drawing.Point(3, 673);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(156, 40);
             this.groupBox5.TabIndex = 14;
@@ -939,19 +752,16 @@ namespace metilest2009
             // 
             // txtC18
             // 
-            this.txtC18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtC18.Location = new System.Drawing.Point(7, 14);
+            this.txtC18.Mask = "99.99";
             this.txtC18.Name = "txtC18";
             this.txtC18.Size = new System.Drawing.Size(142, 20);
             this.txtC18.TabIndex = 1;
             // 
             // groupBox93
             // 
-            this.groupBox93.BackColor = System.Drawing.Color.LightSteelBlue;
             this.groupBox93.Controls.Add(this.txtC18ISO);
-            this.groupBox93.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox93.Location = new System.Drawing.Point(1, 657);
-            this.groupBox93.Margin = new System.Windows.Forms.Padding(1);
+            this.groupBox93.Location = new System.Drawing.Point(3, 719);
             this.groupBox93.Name = "groupBox93";
             this.groupBox93.Size = new System.Drawing.Size(156, 40);
             this.groupBox93.TabIndex = 15;
@@ -960,19 +770,16 @@ namespace metilest2009
             // 
             // txtC18ISO
             // 
-            this.txtC18ISO.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtC18ISO.Location = new System.Drawing.Point(7, 14);
+            this.txtC18ISO.Mask = "99.99";
             this.txtC18ISO.Name = "txtC18ISO";
             this.txtC18ISO.Size = new System.Drawing.Size(142, 20);
             this.txtC18ISO.TabIndex = 1;
             // 
             // groupBox6
             // 
-            this.groupBox6.BackColor = System.Drawing.Color.LightSteelBlue;
             this.groupBox6.Controls.Add(this.txtC18m);
-            this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox6.Location = new System.Drawing.Point(1, 699);
-            this.groupBox6.Margin = new System.Windows.Forms.Padding(1);
+            this.groupBox6.Location = new System.Drawing.Point(3, 765);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(156, 40);
             this.groupBox6.TabIndex = 16;
@@ -981,19 +788,16 @@ namespace metilest2009
             // 
             // txtC18m
             // 
-            this.txtC18m.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtC18m.Location = new System.Drawing.Point(7, 14);
+            this.txtC18m.Mask = "99.99";
             this.txtC18m.Name = "txtC18m";
             this.txtC18m.Size = new System.Drawing.Size(142, 20);
             this.txtC18m.TabIndex = 1;
             // 
             // groupBox7
             // 
-            this.groupBox7.BackColor = System.Drawing.Color.LightSteelBlue;
             this.groupBox7.Controls.Add(this.txtC18mm);
-            this.groupBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox7.Location = new System.Drawing.Point(1, 741);
-            this.groupBox7.Margin = new System.Windows.Forms.Padding(1);
+            this.groupBox7.Location = new System.Drawing.Point(3, 811);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(156, 40);
             this.groupBox7.TabIndex = 17;
@@ -1002,19 +806,16 @@ namespace metilest2009
             // 
             // txtC18mm
             // 
-            this.txtC18mm.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtC18mm.Location = new System.Drawing.Point(7, 14);
+            this.txtC18mm.Mask = "99.99";
             this.txtC18mm.Name = "txtC18mm";
             this.txtC18mm.Size = new System.Drawing.Size(142, 20);
             this.txtC18mm.TabIndex = 1;
             // 
             // groupBox8
             // 
-            this.groupBox8.BackColor = System.Drawing.Color.LightSteelBlue;
             this.groupBox8.Controls.Add(this.txtC18mmm);
-            this.groupBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox8.Location = new System.Drawing.Point(1, 783);
-            this.groupBox8.Margin = new System.Windows.Forms.Padding(1);
+            this.groupBox8.Location = new System.Drawing.Point(3, 857);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Size = new System.Drawing.Size(156, 40);
             this.groupBox8.TabIndex = 18;
@@ -1023,19 +824,16 @@ namespace metilest2009
             // 
             // txtC18mmm
             // 
-            this.txtC18mmm.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtC18mmm.Location = new System.Drawing.Point(7, 14);
+            this.txtC18mmm.Mask = "99.99";
             this.txtC18mmm.Name = "txtC18mmm";
             this.txtC18mmm.Size = new System.Drawing.Size(142, 20);
             this.txtC18mmm.TabIndex = 1;
             // 
             // groupBox111
             // 
-            this.groupBox111.BackColor = System.Drawing.Color.LightSteelBlue;
             this.groupBox111.Controls.Add(this.txtC18CON);
-            this.groupBox111.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox111.Location = new System.Drawing.Point(1, 825);
-            this.groupBox111.Margin = new System.Windows.Forms.Padding(1);
+            this.groupBox111.Location = new System.Drawing.Point(3, 903);
             this.groupBox111.Name = "groupBox111";
             this.groupBox111.Size = new System.Drawing.Size(156, 40);
             this.groupBox111.TabIndex = 19;
@@ -1044,19 +842,16 @@ namespace metilest2009
             // 
             // txtC18CON
             // 
-            this.txtC18CON.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtC18CON.Location = new System.Drawing.Point(7, 14);
+            this.txtC18CON.Mask = "99.99";
             this.txtC18CON.Name = "txtC18CON";
             this.txtC18CON.Size = new System.Drawing.Size(142, 20);
             this.txtC18CON.TabIndex = 1;
             // 
             // groupBox94
             // 
-            this.groupBox94.BackColor = System.Drawing.Color.LightSteelBlue;
             this.groupBox94.Controls.Add(this.txtC20);
-            this.groupBox94.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox94.Location = new System.Drawing.Point(1, 867);
-            this.groupBox94.Margin = new System.Windows.Forms.Padding(1);
+            this.groupBox94.Location = new System.Drawing.Point(3, 949);
             this.groupBox94.Name = "groupBox94";
             this.groupBox94.Size = new System.Drawing.Size(156, 40);
             this.groupBox94.TabIndex = 20;
@@ -1065,19 +860,16 @@ namespace metilest2009
             // 
             // txtC20
             // 
-            this.txtC20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtC20.Location = new System.Drawing.Point(7, 14);
+            this.txtC20.Mask = "99.99";
             this.txtC20.Name = "txtC20";
             this.txtC20.Size = new System.Drawing.Size(142, 20);
             this.txtC20.TabIndex = 1;
             // 
             // groupBox95
             // 
-            this.groupBox95.BackColor = System.Drawing.Color.LightSteelBlue;
             this.groupBox95.Controls.Add(this.txtC20m);
-            this.groupBox95.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox95.Location = new System.Drawing.Point(1, 909);
-            this.groupBox95.Margin = new System.Windows.Forms.Padding(1);
+            this.groupBox95.Location = new System.Drawing.Point(3, 995);
             this.groupBox95.Name = "groupBox95";
             this.groupBox95.Size = new System.Drawing.Size(156, 40);
             this.groupBox95.TabIndex = 21;
@@ -1086,19 +878,16 @@ namespace metilest2009
             // 
             // txtC20m
             // 
-            this.txtC20m.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtC20m.Location = new System.Drawing.Point(7, 14);
+            this.txtC20m.Mask = "99.99";
             this.txtC20m.Name = "txtC20m";
             this.txtC20m.Size = new System.Drawing.Size(142, 20);
             this.txtC20m.TabIndex = 1;
             // 
             // groupBox96
             // 
-            this.groupBox96.BackColor = System.Drawing.Color.LightSteelBlue;
             this.groupBox96.Controls.Add(this.txtC22);
-            this.groupBox96.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox96.Location = new System.Drawing.Point(1, 951);
-            this.groupBox96.Margin = new System.Windows.Forms.Padding(1);
+            this.groupBox96.Location = new System.Drawing.Point(3, 1041);
             this.groupBox96.Name = "groupBox96";
             this.groupBox96.Size = new System.Drawing.Size(156, 40);
             this.groupBox96.TabIndex = 22;
@@ -1107,19 +896,16 @@ namespace metilest2009
             // 
             // txtC22
             // 
-            this.txtC22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtC22.Location = new System.Drawing.Point(7, 14);
+            this.txtC22.Mask = "99.99";
             this.txtC22.Name = "txtC22";
             this.txtC22.Size = new System.Drawing.Size(142, 20);
             this.txtC22.TabIndex = 1;
             // 
             // groupBox97
             // 
-            this.groupBox97.BackColor = System.Drawing.Color.LightSteelBlue;
             this.groupBox97.Controls.Add(this.txtC22m);
-            this.groupBox97.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox97.Location = new System.Drawing.Point(1, 993);
-            this.groupBox97.Margin = new System.Windows.Forms.Padding(1);
+            this.groupBox97.Location = new System.Drawing.Point(3, 1087);
             this.groupBox97.Name = "groupBox97";
             this.groupBox97.Size = new System.Drawing.Size(156, 40);
             this.groupBox97.TabIndex = 23;
@@ -1128,8 +914,8 @@ namespace metilest2009
             // 
             // txtC22m
             // 
-            this.txtC22m.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtC22m.Location = new System.Drawing.Point(7, 14);
+            this.txtC22m.Mask = "99.99";
             this.txtC22m.Name = "txtC22m";
             this.txtC22m.Size = new System.Drawing.Size(142, 20);
             this.txtC22m.TabIndex = 1;
@@ -1140,13 +926,12 @@ namespace metilest2009
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(613, 609);
+            this.panel5.Size = new System.Drawing.Size(613, 577);
             this.panel5.TabIndex = 0;
             // 
             // flowLayoutPanel2
             // 
             this.flowLayoutPanel2.AutoScroll = true;
-            this.flowLayoutPanel2.BackColor = System.Drawing.Color.AntiqueWhite;
             this.flowLayoutPanel2.Controls.Add(this.groupBox9);
             this.flowLayoutPanel2.Controls.Add(this.groupBox18);
             this.flowLayoutPanel2.Controls.Add(this.groupBox21);
@@ -1176,36 +961,27 @@ namespace metilest2009
             this.flowLayoutPanel2.Controls.Add(this.groupBox84);
             this.flowLayoutPanel2.Controls.Add(this.groupBox78);
             this.flowLayoutPanel2.Controls.Add(this.groupBox81);
-            this.flowLayoutPanel2.Controls.Add(this.groupBoxX);
-            this.flowLayoutPanel2.Controls.Add(this.groupBoxY);
-            this.flowLayoutPanel2.Controls.Add(this.groupBoxZ);
             this.flowLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(613, 609);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(613, 577);
             this.flowLayoutPanel2.TabIndex = 2;
             // 
             // groupBox9
             // 
-            this.groupBox9.BackColor = System.Drawing.Color.MistyRose;
             this.groupBox9.Controls.Add(this.groupBox10);
             this.groupBox9.Controls.Add(this.groupBox11);
-            this.groupBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox9.Location = new System.Drawing.Point(1, 1);
-            this.groupBox9.Margin = new System.Windows.Forms.Padding(1);
+            this.groupBox9.Location = new System.Drawing.Point(3, 3);
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.Size = new System.Drawing.Size(143, 64);
             this.groupBox9.TabIndex = 0;
             this.groupBox9.TabStop = false;
-            this.groupBox9.Text = "Palma";
+            this.groupBox9.Text = "Palma raffinato";
             // 
             // groupBox10
             // 
-            this.groupBox10.BackColor = System.Drawing.Color.PaleGreen;
             this.groupBox10.Controls.Add(this.txtPalmaRafMin);
-            this.groupBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox10.ForeColor = System.Drawing.SystemColors.ControlText;
             this.groupBox10.Location = new System.Drawing.Point(6, 14);
             this.groupBox10.Name = "groupBox10";
             this.groupBox10.Size = new System.Drawing.Size(67, 44);
@@ -1216,16 +992,14 @@ namespace metilest2009
             // txtPalmaRafMin
             // 
             this.txtPalmaRafMin.Location = new System.Drawing.Point(6, 19);
-            this.txtPalmaRafMin.Mask = "999";
+            this.txtPalmaRafMin.Mask = "99";
             this.txtPalmaRafMin.Name = "txtPalmaRafMin";
             this.txtPalmaRafMin.Size = new System.Drawing.Size(51, 20);
             this.txtPalmaRafMin.TabIndex = 0;
             // 
             // groupBox11
             // 
-            this.groupBox11.BackColor = System.Drawing.Color.LightSalmon;
             this.groupBox11.Controls.Add(this.txtPalmaRafMax);
-            this.groupBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox11.Location = new System.Drawing.Point(73, 14);
             this.groupBox11.Name = "groupBox11";
             this.groupBox11.Size = new System.Drawing.Size(63, 44);
@@ -1236,19 +1010,16 @@ namespace metilest2009
             // txtPalmaRafMax
             // 
             this.txtPalmaRafMax.Location = new System.Drawing.Point(6, 18);
-            this.txtPalmaRafMax.Mask = "999";
+            this.txtPalmaRafMax.Mask = "99";
             this.txtPalmaRafMax.Name = "txtPalmaRafMax";
             this.txtPalmaRafMax.Size = new System.Drawing.Size(51, 20);
             this.txtPalmaRafMax.TabIndex = 1;
             // 
             // groupBox18
             // 
-            this.groupBox18.BackColor = System.Drawing.Color.MistyRose;
             this.groupBox18.Controls.Add(this.groupBox19);
             this.groupBox18.Controls.Add(this.groupBox20);
-            this.groupBox18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox18.Location = new System.Drawing.Point(1, 67);
-            this.groupBox18.Margin = new System.Windows.Forms.Padding(1);
+            this.groupBox18.Location = new System.Drawing.Point(3, 73);
             this.groupBox18.Name = "groupBox18";
             this.groupBox18.Size = new System.Drawing.Size(143, 64);
             this.groupBox18.TabIndex = 1;
@@ -1257,9 +1028,7 @@ namespace metilest2009
             // 
             // groupBox19
             // 
-            this.groupBox19.BackColor = System.Drawing.Color.PaleGreen;
             this.groupBox19.Controls.Add(this.txtPalmaAfrMin);
-            this.groupBox19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox19.Location = new System.Drawing.Point(6, 14);
             this.groupBox19.Name = "groupBox19";
             this.groupBox19.Size = new System.Drawing.Size(67, 44);
@@ -1270,16 +1039,14 @@ namespace metilest2009
             // txtPalmaAfrMin
             // 
             this.txtPalmaAfrMin.Location = new System.Drawing.Point(6, 19);
-            this.txtPalmaAfrMin.Mask = "999";
+            this.txtPalmaAfrMin.Mask = "99";
             this.txtPalmaAfrMin.Name = "txtPalmaAfrMin";
             this.txtPalmaAfrMin.Size = new System.Drawing.Size(51, 20);
             this.txtPalmaAfrMin.TabIndex = 0;
             // 
             // groupBox20
             // 
-            this.groupBox20.BackColor = System.Drawing.Color.LightSalmon;
             this.groupBox20.Controls.Add(this.txtPalmaAfrMax);
-            this.groupBox20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox20.Location = new System.Drawing.Point(73, 14);
             this.groupBox20.Name = "groupBox20";
             this.groupBox20.Size = new System.Drawing.Size(63, 44);
@@ -1290,19 +1057,16 @@ namespace metilest2009
             // txtPalmaAfrMax
             // 
             this.txtPalmaAfrMax.Location = new System.Drawing.Point(6, 18);
-            this.txtPalmaAfrMax.Mask = "999";
+            this.txtPalmaAfrMax.Mask = "99";
             this.txtPalmaAfrMax.Name = "txtPalmaAfrMax";
             this.txtPalmaAfrMax.Size = new System.Drawing.Size(51, 20);
             this.txtPalmaAfrMax.TabIndex = 1;
             // 
             // groupBox21
             // 
-            this.groupBox21.BackColor = System.Drawing.Color.MistyRose;
             this.groupBox21.Controls.Add(this.groupBox22);
             this.groupBox21.Controls.Add(this.groupBox23);
-            this.groupBox21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox21.Location = new System.Drawing.Point(1, 133);
-            this.groupBox21.Margin = new System.Windows.Forms.Padding(1);
+            this.groupBox21.Location = new System.Drawing.Point(3, 143);
             this.groupBox21.Name = "groupBox21";
             this.groupBox21.Size = new System.Drawing.Size(143, 64);
             this.groupBox21.TabIndex = 2;
@@ -1311,9 +1075,7 @@ namespace metilest2009
             // 
             // groupBox22
             // 
-            this.groupBox22.BackColor = System.Drawing.Color.PaleGreen;
             this.groupBox22.Controls.Add(this.txtPalmaOle60Min);
-            this.groupBox22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox22.Location = new System.Drawing.Point(6, 14);
             this.groupBox22.Name = "groupBox22";
             this.groupBox22.Size = new System.Drawing.Size(67, 44);
@@ -1324,16 +1086,14 @@ namespace metilest2009
             // txtPalmaOle60Min
             // 
             this.txtPalmaOle60Min.Location = new System.Drawing.Point(6, 19);
-            this.txtPalmaOle60Min.Mask = "999";
+            this.txtPalmaOle60Min.Mask = "99";
             this.txtPalmaOle60Min.Name = "txtPalmaOle60Min";
             this.txtPalmaOle60Min.Size = new System.Drawing.Size(51, 20);
             this.txtPalmaOle60Min.TabIndex = 0;
             // 
             // groupBox23
             // 
-            this.groupBox23.BackColor = System.Drawing.Color.LightSalmon;
             this.groupBox23.Controls.Add(this.txtPalmaOle60Max);
-            this.groupBox23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox23.Location = new System.Drawing.Point(73, 14);
             this.groupBox23.Name = "groupBox23";
             this.groupBox23.Size = new System.Drawing.Size(63, 44);
@@ -1344,19 +1104,16 @@ namespace metilest2009
             // txtPalmaOle60Max
             // 
             this.txtPalmaOle60Max.Location = new System.Drawing.Point(6, 18);
-            this.txtPalmaOle60Max.Mask = "999";
+            this.txtPalmaOle60Max.Mask = "99";
             this.txtPalmaOle60Max.Name = "txtPalmaOle60Max";
             this.txtPalmaOle60Max.Size = new System.Drawing.Size(51, 20);
             this.txtPalmaOle60Max.TabIndex = 1;
             // 
             // groupBox12
             // 
-            this.groupBox12.BackColor = System.Drawing.Color.MistyRose;
             this.groupBox12.Controls.Add(this.groupBox13);
             this.groupBox12.Controls.Add(this.groupBox14);
-            this.groupBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox12.Location = new System.Drawing.Point(1, 199);
-            this.groupBox12.Margin = new System.Windows.Forms.Padding(1);
+            this.groupBox12.Location = new System.Drawing.Point(3, 213);
             this.groupBox12.Name = "groupBox12";
             this.groupBox12.Size = new System.Drawing.Size(143, 64);
             this.groupBox12.TabIndex = 3;
@@ -1365,9 +1122,7 @@ namespace metilest2009
             // 
             // groupBox13
             // 
-            this.groupBox13.BackColor = System.Drawing.Color.PaleGreen;
             this.groupBox13.Controls.Add(this.txtPalmaOle62Min);
-            this.groupBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox13.Location = new System.Drawing.Point(6, 14);
             this.groupBox13.Name = "groupBox13";
             this.groupBox13.Size = new System.Drawing.Size(67, 44);
@@ -1378,16 +1133,14 @@ namespace metilest2009
             // txtPalmaOle62Min
             // 
             this.txtPalmaOle62Min.Location = new System.Drawing.Point(6, 19);
-            this.txtPalmaOle62Min.Mask = "999";
+            this.txtPalmaOle62Min.Mask = "99";
             this.txtPalmaOle62Min.Name = "txtPalmaOle62Min";
             this.txtPalmaOle62Min.Size = new System.Drawing.Size(51, 20);
             this.txtPalmaOle62Min.TabIndex = 0;
             // 
             // groupBox14
             // 
-            this.groupBox14.BackColor = System.Drawing.Color.LightSalmon;
             this.groupBox14.Controls.Add(this.txtPalmaOle62Max);
-            this.groupBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox14.Location = new System.Drawing.Point(73, 14);
             this.groupBox14.Name = "groupBox14";
             this.groupBox14.Size = new System.Drawing.Size(63, 44);
@@ -1398,19 +1151,16 @@ namespace metilest2009
             // txtPalmaOle62Max
             // 
             this.txtPalmaOle62Max.Location = new System.Drawing.Point(6, 18);
-            this.txtPalmaOle62Max.Mask = "999";
+            this.txtPalmaOle62Max.Mask = "99";
             this.txtPalmaOle62Max.Name = "txtPalmaOle62Max";
             this.txtPalmaOle62Max.Size = new System.Drawing.Size(51, 20);
             this.txtPalmaOle62Max.TabIndex = 1;
             // 
             // groupBox15
             // 
-            this.groupBox15.BackColor = System.Drawing.Color.MistyRose;
             this.groupBox15.Controls.Add(this.groupBox16);
             this.groupBox15.Controls.Add(this.groupBox17);
-            this.groupBox15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox15.Location = new System.Drawing.Point(1, 265);
-            this.groupBox15.Margin = new System.Windows.Forms.Padding(1);
+            this.groupBox15.Location = new System.Drawing.Point(3, 283);
             this.groupBox15.Name = "groupBox15";
             this.groupBox15.Size = new System.Drawing.Size(143, 64);
             this.groupBox15.TabIndex = 4;
@@ -1419,9 +1169,7 @@ namespace metilest2009
             // 
             // groupBox16
             // 
-            this.groupBox16.BackColor = System.Drawing.Color.PaleGreen;
             this.groupBox16.Controls.Add(this.txtPalmaOle64Min);
-            this.groupBox16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox16.Location = new System.Drawing.Point(6, 14);
             this.groupBox16.Name = "groupBox16";
             this.groupBox16.Size = new System.Drawing.Size(67, 44);
@@ -1432,16 +1180,14 @@ namespace metilest2009
             // txtPalmaOle64Min
             // 
             this.txtPalmaOle64Min.Location = new System.Drawing.Point(6, 19);
-            this.txtPalmaOle64Min.Mask = "999";
+            this.txtPalmaOle64Min.Mask = "99";
             this.txtPalmaOle64Min.Name = "txtPalmaOle64Min";
             this.txtPalmaOle64Min.Size = new System.Drawing.Size(51, 20);
             this.txtPalmaOle64Min.TabIndex = 0;
             // 
             // groupBox17
             // 
-            this.groupBox17.BackColor = System.Drawing.Color.LightSalmon;
             this.groupBox17.Controls.Add(this.txtPalmaOle64Max);
-            this.groupBox17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox17.Location = new System.Drawing.Point(73, 14);
             this.groupBox17.Name = "groupBox17";
             this.groupBox17.Size = new System.Drawing.Size(63, 44);
@@ -1452,19 +1198,16 @@ namespace metilest2009
             // txtPalmaOle64Max
             // 
             this.txtPalmaOle64Max.Location = new System.Drawing.Point(6, 18);
-            this.txtPalmaOle64Max.Mask = "999";
+            this.txtPalmaOle64Max.Mask = "99";
             this.txtPalmaOle64Max.Name = "txtPalmaOle64Max";
             this.txtPalmaOle64Max.Size = new System.Drawing.Size(51, 20);
             this.txtPalmaOle64Max.TabIndex = 1;
             // 
             // groupBox24
             // 
-            this.groupBox24.BackColor = System.Drawing.Color.MistyRose;
             this.groupBox24.Controls.Add(this.groupBox25);
             this.groupBox24.Controls.Add(this.groupBox26);
-            this.groupBox24.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox24.Location = new System.Drawing.Point(1, 331);
-            this.groupBox24.Margin = new System.Windows.Forms.Padding(1);
+            this.groupBox24.Location = new System.Drawing.Point(3, 353);
             this.groupBox24.Name = "groupBox24";
             this.groupBox24.Size = new System.Drawing.Size(143, 64);
             this.groupBox24.TabIndex = 5;
@@ -1473,9 +1216,7 @@ namespace metilest2009
             // 
             // groupBox25
             // 
-            this.groupBox25.BackColor = System.Drawing.Color.PaleGreen;
             this.groupBox25.Controls.Add(this.txtPalmaSte48Min);
-            this.groupBox25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox25.Location = new System.Drawing.Point(6, 14);
             this.groupBox25.Name = "groupBox25";
             this.groupBox25.Size = new System.Drawing.Size(67, 44);
@@ -1485,17 +1226,15 @@ namespace metilest2009
             // 
             // txtPalmaSte48Min
             // 
-            this.txtPalmaSte48Min.Location = new System.Drawing.Point(6, 18);
-            this.txtPalmaSte48Min.Mask = "999";
+            this.txtPalmaSte48Min.Location = new System.Drawing.Point(6, 19);
+            this.txtPalmaSte48Min.Mask = "99";
             this.txtPalmaSte48Min.Name = "txtPalmaSte48Min";
             this.txtPalmaSte48Min.Size = new System.Drawing.Size(51, 20);
             this.txtPalmaSte48Min.TabIndex = 0;
             // 
             // groupBox26
             // 
-            this.groupBox26.BackColor = System.Drawing.Color.LightSalmon;
             this.groupBox26.Controls.Add(this.txtPalmaSte48Max);
-            this.groupBox26.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox26.Location = new System.Drawing.Point(73, 14);
             this.groupBox26.Name = "groupBox26";
             this.groupBox26.Size = new System.Drawing.Size(63, 44);
@@ -1506,19 +1245,16 @@ namespace metilest2009
             // txtPalmaSte48Max
             // 
             this.txtPalmaSte48Max.Location = new System.Drawing.Point(6, 18);
-            this.txtPalmaSte48Max.Mask = "999";
+            this.txtPalmaSte48Max.Mask = "99";
             this.txtPalmaSte48Max.Name = "txtPalmaSte48Max";
             this.txtPalmaSte48Max.Size = new System.Drawing.Size(51, 20);
             this.txtPalmaSte48Max.TabIndex = 1;
             // 
             // groupBox45
             // 
-            this.groupBox45.BackColor = System.Drawing.Color.MistyRose;
             this.groupBox45.Controls.Add(this.groupBox46);
             this.groupBox45.Controls.Add(this.groupBox47);
-            this.groupBox45.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox45.Location = new System.Drawing.Point(1, 397);
-            this.groupBox45.Margin = new System.Windows.Forms.Padding(1);
+            this.groupBox45.Location = new System.Drawing.Point(3, 423);
             this.groupBox45.Name = "groupBox45";
             this.groupBox45.Size = new System.Drawing.Size(143, 64);
             this.groupBox45.TabIndex = 6;
@@ -1527,9 +1263,7 @@ namespace metilest2009
             // 
             // groupBox46
             // 
-            this.groupBox46.BackColor = System.Drawing.Color.PaleGreen;
             this.groupBox46.Controls.Add(this.txtPalmaSte53Min);
-            this.groupBox46.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox46.Location = new System.Drawing.Point(6, 14);
             this.groupBox46.Name = "groupBox46";
             this.groupBox46.Size = new System.Drawing.Size(67, 44);
@@ -1540,16 +1274,14 @@ namespace metilest2009
             // txtPalmaSte53Min
             // 
             this.txtPalmaSte53Min.Location = new System.Drawing.Point(6, 19);
-            this.txtPalmaSte53Min.Mask = "999";
+            this.txtPalmaSte53Min.Mask = "99";
             this.txtPalmaSte53Min.Name = "txtPalmaSte53Min";
             this.txtPalmaSte53Min.Size = new System.Drawing.Size(51, 20);
             this.txtPalmaSte53Min.TabIndex = 0;
             // 
             // groupBox47
             // 
-            this.groupBox47.BackColor = System.Drawing.Color.LightSalmon;
             this.groupBox47.Controls.Add(this.txtPalmaSte53Max);
-            this.groupBox47.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox47.Location = new System.Drawing.Point(73, 14);
             this.groupBox47.Name = "groupBox47";
             this.groupBox47.Size = new System.Drawing.Size(63, 44);
@@ -1560,30 +1292,25 @@ namespace metilest2009
             // txtPalmaSte53Max
             // 
             this.txtPalmaSte53Max.Location = new System.Drawing.Point(6, 18);
-            this.txtPalmaSte53Max.Mask = "999";
+            this.txtPalmaSte53Max.Mask = "99";
             this.txtPalmaSte53Max.Name = "txtPalmaSte53Max";
             this.txtPalmaSte53Max.Size = new System.Drawing.Size(51, 20);
             this.txtPalmaSte53Max.TabIndex = 1;
             // 
             // groupBox27
             // 
-            this.groupBox27.BackColor = System.Drawing.Color.MistyRose;
             this.groupBox27.Controls.Add(this.groupBox28);
             this.groupBox27.Controls.Add(this.groupBox29);
-            this.groupBox27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox27.Location = new System.Drawing.Point(1, 463);
-            this.groupBox27.Margin = new System.Windows.Forms.Padding(1);
+            this.groupBox27.Location = new System.Drawing.Point(3, 493);
             this.groupBox27.Name = "groupBox27";
             this.groupBox27.Size = new System.Drawing.Size(143, 64);
             this.groupBox27.TabIndex = 7;
             this.groupBox27.TabStop = false;
-            this.groupBox27.Text = "Cocco";
+            this.groupBox27.Text = "Cocco raffinato";
             // 
             // groupBox28
             // 
-            this.groupBox28.BackColor = System.Drawing.Color.PaleGreen;
             this.groupBox28.Controls.Add(this.txtCoccoRafMin);
-            this.groupBox28.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox28.Location = new System.Drawing.Point(6, 14);
             this.groupBox28.Name = "groupBox28";
             this.groupBox28.Size = new System.Drawing.Size(67, 44);
@@ -1594,16 +1321,14 @@ namespace metilest2009
             // txtCoccoRafMin
             // 
             this.txtCoccoRafMin.Location = new System.Drawing.Point(6, 19);
-            this.txtCoccoRafMin.Mask = "999";
+            this.txtCoccoRafMin.Mask = "99";
             this.txtCoccoRafMin.Name = "txtCoccoRafMin";
             this.txtCoccoRafMin.Size = new System.Drawing.Size(51, 20);
             this.txtCoccoRafMin.TabIndex = 0;
             // 
             // groupBox29
             // 
-            this.groupBox29.BackColor = System.Drawing.Color.LightSalmon;
             this.groupBox29.Controls.Add(this.txtCoccoRafMax);
-            this.groupBox29.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox29.Location = new System.Drawing.Point(73, 14);
             this.groupBox29.Name = "groupBox29";
             this.groupBox29.Size = new System.Drawing.Size(63, 44);
@@ -1614,19 +1339,16 @@ namespace metilest2009
             // txtCoccoRafMax
             // 
             this.txtCoccoRafMax.Location = new System.Drawing.Point(6, 18);
-            this.txtCoccoRafMax.Mask = "999";
+            this.txtCoccoRafMax.Mask = "99";
             this.txtCoccoRafMax.Name = "txtCoccoRafMax";
             this.txtCoccoRafMax.Size = new System.Drawing.Size(51, 20);
             this.txtCoccoRafMax.TabIndex = 1;
             // 
             // groupBox30
             // 
-            this.groupBox30.BackColor = System.Drawing.Color.MistyRose;
             this.groupBox30.Controls.Add(this.groupBox31);
             this.groupBox30.Controls.Add(this.groupBox32);
-            this.groupBox30.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox30.Location = new System.Drawing.Point(1, 529);
-            this.groupBox30.Margin = new System.Windows.Forms.Padding(1);
+            this.groupBox30.Location = new System.Drawing.Point(152, 3);
             this.groupBox30.Name = "groupBox30";
             this.groupBox30.Size = new System.Drawing.Size(143, 64);
             this.groupBox30.TabIndex = 8;
@@ -1635,9 +1357,7 @@ namespace metilest2009
             // 
             // groupBox31
             // 
-            this.groupBox31.BackColor = System.Drawing.Color.PaleGreen;
             this.groupBox31.Controls.Add(this.txtCoccoIdMin);
-            this.groupBox31.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox31.Location = new System.Drawing.Point(6, 14);
             this.groupBox31.Name = "groupBox31";
             this.groupBox31.Size = new System.Drawing.Size(67, 44);
@@ -1648,16 +1368,14 @@ namespace metilest2009
             // txtCoccoIdMin
             // 
             this.txtCoccoIdMin.Location = new System.Drawing.Point(6, 19);
-            this.txtCoccoIdMin.Mask = "999";
+            this.txtCoccoIdMin.Mask = "99";
             this.txtCoccoIdMin.Name = "txtCoccoIdMin";
             this.txtCoccoIdMin.Size = new System.Drawing.Size(51, 20);
             this.txtCoccoIdMin.TabIndex = 0;
             // 
             // groupBox32
             // 
-            this.groupBox32.BackColor = System.Drawing.Color.LightSalmon;
             this.groupBox32.Controls.Add(this.txtCoccoIdMax);
-            this.groupBox32.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox32.Location = new System.Drawing.Point(73, 14);
             this.groupBox32.Name = "groupBox32";
             this.groupBox32.Size = new System.Drawing.Size(63, 44);
@@ -1668,30 +1386,25 @@ namespace metilest2009
             // txtCoccoIdMax
             // 
             this.txtCoccoIdMax.Location = new System.Drawing.Point(6, 18);
-            this.txtCoccoIdMax.Mask = "999";
+            this.txtCoccoIdMax.Mask = "99";
             this.txtCoccoIdMax.Name = "txtCoccoIdMax";
             this.txtCoccoIdMax.Size = new System.Drawing.Size(51, 20);
             this.txtCoccoIdMax.TabIndex = 1;
             // 
             // groupBox33
             // 
-            this.groupBox33.BackColor = System.Drawing.Color.MistyRose;
             this.groupBox33.Controls.Add(this.groupBox34);
             this.groupBox33.Controls.Add(this.groupBox35);
-            this.groupBox33.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox33.Location = new System.Drawing.Point(146, 1);
-            this.groupBox33.Margin = new System.Windows.Forms.Padding(1);
+            this.groupBox33.Location = new System.Drawing.Point(152, 73);
             this.groupBox33.Name = "groupBox33";
             this.groupBox33.Size = new System.Drawing.Size(143, 64);
             this.groupBox33.TabIndex = 9;
             this.groupBox33.TabStop = false;
-            this.groupBox33.Text = "Palmisti";
+            this.groupBox33.Text = "Palmisti raf.";
             // 
             // groupBox34
             // 
-            this.groupBox34.BackColor = System.Drawing.Color.PaleGreen;
             this.groupBox34.Controls.Add(this.txtPalmistiRafMin);
-            this.groupBox34.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox34.Location = new System.Drawing.Point(6, 14);
             this.groupBox34.Name = "groupBox34";
             this.groupBox34.Size = new System.Drawing.Size(67, 44);
@@ -1702,16 +1415,14 @@ namespace metilest2009
             // txtPalmistiRafMin
             // 
             this.txtPalmistiRafMin.Location = new System.Drawing.Point(6, 19);
-            this.txtPalmistiRafMin.Mask = "999";
+            this.txtPalmistiRafMin.Mask = "99";
             this.txtPalmistiRafMin.Name = "txtPalmistiRafMin";
             this.txtPalmistiRafMin.Size = new System.Drawing.Size(51, 20);
             this.txtPalmistiRafMin.TabIndex = 0;
             // 
             // groupBox35
             // 
-            this.groupBox35.BackColor = System.Drawing.Color.LightSalmon;
             this.groupBox35.Controls.Add(this.txtPalmistiRafMax);
-            this.groupBox35.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox35.Location = new System.Drawing.Point(73, 14);
             this.groupBox35.Name = "groupBox35";
             this.groupBox35.Size = new System.Drawing.Size(63, 44);
@@ -1722,19 +1433,16 @@ namespace metilest2009
             // txtPalmistiRafMax
             // 
             this.txtPalmistiRafMax.Location = new System.Drawing.Point(6, 18);
-            this.txtPalmistiRafMax.Mask = "999";
+            this.txtPalmistiRafMax.Mask = "99";
             this.txtPalmistiRafMax.Name = "txtPalmistiRafMax";
             this.txtPalmistiRafMax.Size = new System.Drawing.Size(51, 20);
             this.txtPalmistiRafMax.TabIndex = 1;
             // 
             // groupBox36
             // 
-            this.groupBox36.BackColor = System.Drawing.Color.MistyRose;
             this.groupBox36.Controls.Add(this.groupBox37);
             this.groupBox36.Controls.Add(this.groupBox38);
-            this.groupBox36.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox36.Location = new System.Drawing.Point(146, 67);
-            this.groupBox36.Margin = new System.Windows.Forms.Padding(1);
+            this.groupBox36.Location = new System.Drawing.Point(152, 143);
             this.groupBox36.Name = "groupBox36";
             this.groupBox36.Size = new System.Drawing.Size(143, 64);
             this.groupBox36.TabIndex = 10;
@@ -1743,9 +1451,7 @@ namespace metilest2009
             // 
             // groupBox37
             // 
-            this.groupBox37.BackColor = System.Drawing.Color.PaleGreen;
             this.groupBox37.Controls.Add(this.txtPalmistiIdMin);
-            this.groupBox37.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox37.Location = new System.Drawing.Point(6, 14);
             this.groupBox37.Name = "groupBox37";
             this.groupBox37.Size = new System.Drawing.Size(67, 44);
@@ -1756,16 +1462,14 @@ namespace metilest2009
             // txtPalmistiIdMin
             // 
             this.txtPalmistiIdMin.Location = new System.Drawing.Point(6, 19);
-            this.txtPalmistiIdMin.Mask = "999";
+            this.txtPalmistiIdMin.Mask = "99";
             this.txtPalmistiIdMin.Name = "txtPalmistiIdMin";
             this.txtPalmistiIdMin.Size = new System.Drawing.Size(51, 20);
             this.txtPalmistiIdMin.TabIndex = 0;
             // 
             // groupBox38
             // 
-            this.groupBox38.BackColor = System.Drawing.Color.LightSalmon;
             this.groupBox38.Controls.Add(this.txtPalmistiIdMax);
-            this.groupBox38.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox38.Location = new System.Drawing.Point(73, 14);
             this.groupBox38.Name = "groupBox38";
             this.groupBox38.Size = new System.Drawing.Size(63, 44);
@@ -1776,19 +1480,16 @@ namespace metilest2009
             // txtPalmistiIdMax
             // 
             this.txtPalmistiIdMax.Location = new System.Drawing.Point(6, 18);
-            this.txtPalmistiIdMax.Mask = "999";
+            this.txtPalmistiIdMax.Mask = "99";
             this.txtPalmistiIdMax.Name = "txtPalmistiIdMax";
             this.txtPalmistiIdMax.Size = new System.Drawing.Size(51, 20);
             this.txtPalmistiIdMax.TabIndex = 1;
             // 
             // groupBox39
             // 
-            this.groupBox39.BackColor = System.Drawing.Color.MistyRose;
             this.groupBox39.Controls.Add(this.groupBox40);
             this.groupBox39.Controls.Add(this.groupBox41);
-            this.groupBox39.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox39.Location = new System.Drawing.Point(146, 133);
-            this.groupBox39.Margin = new System.Windows.Forms.Padding(1);
+            this.groupBox39.Location = new System.Drawing.Point(152, 213);
             this.groupBox39.Name = "groupBox39";
             this.groupBox39.Size = new System.Drawing.Size(143, 64);
             this.groupBox39.TabIndex = 11;
@@ -1797,9 +1498,7 @@ namespace metilest2009
             // 
             // groupBox40
             // 
-            this.groupBox40.BackColor = System.Drawing.Color.PaleGreen;
             this.groupBox40.Controls.Add(this.txtPalmistiOleMin);
-            this.groupBox40.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox40.Location = new System.Drawing.Point(6, 14);
             this.groupBox40.Name = "groupBox40";
             this.groupBox40.Size = new System.Drawing.Size(67, 44);
@@ -1810,16 +1509,14 @@ namespace metilest2009
             // txtPalmistiOleMin
             // 
             this.txtPalmistiOleMin.Location = new System.Drawing.Point(6, 19);
-            this.txtPalmistiOleMin.Mask = "999";
+            this.txtPalmistiOleMin.Mask = "99";
             this.txtPalmistiOleMin.Name = "txtPalmistiOleMin";
             this.txtPalmistiOleMin.Size = new System.Drawing.Size(51, 20);
             this.txtPalmistiOleMin.TabIndex = 0;
             // 
             // groupBox41
             // 
-            this.groupBox41.BackColor = System.Drawing.Color.LightSalmon;
             this.groupBox41.Controls.Add(this.txtPalmistiOleMax);
-            this.groupBox41.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox41.Location = new System.Drawing.Point(73, 14);
             this.groupBox41.Name = "groupBox41";
             this.groupBox41.Size = new System.Drawing.Size(63, 44);
@@ -1830,19 +1527,16 @@ namespace metilest2009
             // txtPalmistiOleMax
             // 
             this.txtPalmistiOleMax.Location = new System.Drawing.Point(6, 18);
-            this.txtPalmistiOleMax.Mask = "999";
+            this.txtPalmistiOleMax.Mask = "99";
             this.txtPalmistiOleMax.Name = "txtPalmistiOleMax";
             this.txtPalmistiOleMax.Size = new System.Drawing.Size(51, 20);
             this.txtPalmistiOleMax.TabIndex = 1;
             // 
             // groupBox54
             // 
-            this.groupBox54.BackColor = System.Drawing.Color.MistyRose;
             this.groupBox54.Controls.Add(this.groupBox55);
             this.groupBox54.Controls.Add(this.groupBox56);
-            this.groupBox54.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox54.Location = new System.Drawing.Point(146, 199);
-            this.groupBox54.Margin = new System.Windows.Forms.Padding(1);
+            this.groupBox54.Location = new System.Drawing.Point(152, 283);
             this.groupBox54.Name = "groupBox54";
             this.groupBox54.Size = new System.Drawing.Size(143, 64);
             this.groupBox54.TabIndex = 12;
@@ -1851,9 +1545,7 @@ namespace metilest2009
             // 
             // groupBox55
             // 
-            this.groupBox55.BackColor = System.Drawing.Color.PaleGreen;
             this.groupBox55.Controls.Add(this.txtPalmistiFrazMin);
-            this.groupBox55.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox55.Location = new System.Drawing.Point(6, 14);
             this.groupBox55.Name = "groupBox55";
             this.groupBox55.Size = new System.Drawing.Size(67, 44);
@@ -1864,16 +1556,14 @@ namespace metilest2009
             // txtPalmistiFrazMin
             // 
             this.txtPalmistiFrazMin.Location = new System.Drawing.Point(6, 19);
-            this.txtPalmistiFrazMin.Mask = "999";
+            this.txtPalmistiFrazMin.Mask = "99";
             this.txtPalmistiFrazMin.Name = "txtPalmistiFrazMin";
             this.txtPalmistiFrazMin.Size = new System.Drawing.Size(51, 20);
             this.txtPalmistiFrazMin.TabIndex = 0;
             // 
             // groupBox56
             // 
-            this.groupBox56.BackColor = System.Drawing.Color.LightSalmon;
             this.groupBox56.Controls.Add(this.txtPalmistiFrazMax);
-            this.groupBox56.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox56.Location = new System.Drawing.Point(73, 14);
             this.groupBox56.Name = "groupBox56";
             this.groupBox56.Size = new System.Drawing.Size(63, 44);
@@ -1884,30 +1574,25 @@ namespace metilest2009
             // txtPalmistiFrazMax
             // 
             this.txtPalmistiFrazMax.Location = new System.Drawing.Point(6, 18);
-            this.txtPalmistiFrazMax.Mask = "999";
+            this.txtPalmistiFrazMax.Mask = "99";
             this.txtPalmistiFrazMax.Name = "txtPalmistiFrazMax";
             this.txtPalmistiFrazMax.Size = new System.Drawing.Size(51, 20);
             this.txtPalmistiFrazMax.TabIndex = 1;
             // 
             // groupBox42
             // 
-            this.groupBox42.BackColor = System.Drawing.Color.MistyRose;
             this.groupBox42.Controls.Add(this.groupBox43);
             this.groupBox42.Controls.Add(this.groupBox44);
-            this.groupBox42.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox42.Location = new System.Drawing.Point(146, 265);
-            this.groupBox42.Margin = new System.Windows.Forms.Padding(1);
+            this.groupBox42.Location = new System.Drawing.Point(152, 353);
             this.groupBox42.Name = "groupBox42";
             this.groupBox42.Size = new System.Drawing.Size(143, 64);
             this.groupBox42.TabIndex = 13;
             this.groupBox42.TabStop = false;
-            this.groupBox42.Text = "Soia";
+            this.groupBox42.Text = "Soia raffinato";
             // 
             // groupBox43
             // 
-            this.groupBox43.BackColor = System.Drawing.Color.PaleGreen;
             this.groupBox43.Controls.Add(this.txtSoiaRafMin);
-            this.groupBox43.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox43.Location = new System.Drawing.Point(6, 14);
             this.groupBox43.Name = "groupBox43";
             this.groupBox43.Size = new System.Drawing.Size(67, 44);
@@ -1918,16 +1603,14 @@ namespace metilest2009
             // txtSoiaRafMin
             // 
             this.txtSoiaRafMin.Location = new System.Drawing.Point(6, 19);
-            this.txtSoiaRafMin.Mask = "999";
+            this.txtSoiaRafMin.Mask = "99";
             this.txtSoiaRafMin.Name = "txtSoiaRafMin";
             this.txtSoiaRafMin.Size = new System.Drawing.Size(51, 20);
             this.txtSoiaRafMin.TabIndex = 0;
             // 
             // groupBox44
             // 
-            this.groupBox44.BackColor = System.Drawing.Color.LightSalmon;
             this.groupBox44.Controls.Add(this.txtSoiaRafMax);
-            this.groupBox44.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox44.Location = new System.Drawing.Point(73, 14);
             this.groupBox44.Name = "groupBox44";
             this.groupBox44.Size = new System.Drawing.Size(63, 44);
@@ -1938,30 +1621,25 @@ namespace metilest2009
             // txtSoiaRafMax
             // 
             this.txtSoiaRafMax.Location = new System.Drawing.Point(6, 18);
-            this.txtSoiaRafMax.Mask = "999";
+            this.txtSoiaRafMax.Mask = "99";
             this.txtSoiaRafMax.Name = "txtSoiaRafMax";
             this.txtSoiaRafMax.Size = new System.Drawing.Size(51, 20);
             this.txtSoiaRafMax.TabIndex = 1;
             // 
             // groupBox60
             // 
-            this.groupBox60.BackColor = System.Drawing.Color.MistyRose;
             this.groupBox60.Controls.Add(this.groupBox61);
             this.groupBox60.Controls.Add(this.groupBox62);
-            this.groupBox60.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox60.Location = new System.Drawing.Point(146, 331);
-            this.groupBox60.Margin = new System.Windows.Forms.Padding(1);
+            this.groupBox60.Location = new System.Drawing.Point(152, 423);
             this.groupBox60.Name = "groupBox60";
             this.groupBox60.Size = new System.Drawing.Size(143, 64);
             this.groupBox60.TabIndex = 14;
             this.groupBox60.TabStop = false;
-            this.groupBox60.Text = "Colza";
+            this.groupBox60.Text = "Colza raffinato";
             // 
             // groupBox61
             // 
-            this.groupBox61.BackColor = System.Drawing.Color.PaleGreen;
             this.groupBox61.Controls.Add(this.txtColzaRafMin);
-            this.groupBox61.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox61.Location = new System.Drawing.Point(6, 14);
             this.groupBox61.Name = "groupBox61";
             this.groupBox61.Size = new System.Drawing.Size(67, 44);
@@ -1972,16 +1650,14 @@ namespace metilest2009
             // txtColzaRafMin
             // 
             this.txtColzaRafMin.Location = new System.Drawing.Point(6, 19);
-            this.txtColzaRafMin.Mask = "999";
+            this.txtColzaRafMin.Mask = "99";
             this.txtColzaRafMin.Name = "txtColzaRafMin";
             this.txtColzaRafMin.Size = new System.Drawing.Size(51, 20);
             this.txtColzaRafMin.TabIndex = 0;
             // 
             // groupBox62
             // 
-            this.groupBox62.BackColor = System.Drawing.Color.LightSalmon;
             this.groupBox62.Controls.Add(this.txtColzaRafMax);
-            this.groupBox62.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox62.Location = new System.Drawing.Point(73, 14);
             this.groupBox62.Name = "groupBox62";
             this.groupBox62.Size = new System.Drawing.Size(63, 44);
@@ -1992,30 +1668,25 @@ namespace metilest2009
             // txtColzaRafMax
             // 
             this.txtColzaRafMax.Location = new System.Drawing.Point(6, 18);
-            this.txtColzaRafMax.Mask = "999";
+            this.txtColzaRafMax.Mask = "99";
             this.txtColzaRafMax.Name = "txtColzaRafMax";
             this.txtColzaRafMax.Size = new System.Drawing.Size(51, 20);
             this.txtColzaRafMax.TabIndex = 1;
             // 
             // groupBox63
             // 
-            this.groupBox63.BackColor = System.Drawing.Color.MistyRose;
             this.groupBox63.Controls.Add(this.groupBox64);
             this.groupBox63.Controls.Add(this.groupBox65);
-            this.groupBox63.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox63.Location = new System.Drawing.Point(146, 397);
-            this.groupBox63.Margin = new System.Windows.Forms.Padding(1);
+            this.groupBox63.Location = new System.Drawing.Point(152, 493);
             this.groupBox63.Name = "groupBox63";
             this.groupBox63.Size = new System.Drawing.Size(143, 64);
             this.groupBox63.TabIndex = 15;
             this.groupBox63.TabStop = false;
-            this.groupBox63.Text = "Arachide";
+            this.groupBox63.Text = "Arachide raffinato";
             // 
             // groupBox64
             // 
-            this.groupBox64.BackColor = System.Drawing.Color.PaleGreen;
             this.groupBox64.Controls.Add(this.txtArachideRafMin);
-            this.groupBox64.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox64.Location = new System.Drawing.Point(6, 14);
             this.groupBox64.Name = "groupBox64";
             this.groupBox64.Size = new System.Drawing.Size(67, 44);
@@ -2026,16 +1697,14 @@ namespace metilest2009
             // txtArachideRafMin
             // 
             this.txtArachideRafMin.Location = new System.Drawing.Point(6, 19);
-            this.txtArachideRafMin.Mask = "999";
+            this.txtArachideRafMin.Mask = "99";
             this.txtArachideRafMin.Name = "txtArachideRafMin";
             this.txtArachideRafMin.Size = new System.Drawing.Size(51, 20);
             this.txtArachideRafMin.TabIndex = 0;
             // 
             // groupBox65
             // 
-            this.groupBox65.BackColor = System.Drawing.Color.LightSalmon;
             this.groupBox65.Controls.Add(this.txtArachideRafMax);
-            this.groupBox65.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox65.Location = new System.Drawing.Point(73, 14);
             this.groupBox65.Name = "groupBox65";
             this.groupBox65.Size = new System.Drawing.Size(63, 44);
@@ -2046,19 +1715,16 @@ namespace metilest2009
             // txtArachideRafMax
             // 
             this.txtArachideRafMax.Location = new System.Drawing.Point(6, 18);
-            this.txtArachideRafMax.Mask = "999";
+            this.txtArachideRafMax.Mask = "99";
             this.txtArachideRafMax.Name = "txtArachideRafMax";
             this.txtArachideRafMax.Size = new System.Drawing.Size(51, 20);
             this.txtArachideRafMax.TabIndex = 1;
             // 
             // groupBox57
             // 
-            this.groupBox57.BackColor = System.Drawing.Color.MistyRose;
             this.groupBox57.Controls.Add(this.groupBox58);
             this.groupBox57.Controls.Add(this.groupBox59);
-            this.groupBox57.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox57.Location = new System.Drawing.Point(146, 463);
-            this.groupBox57.Margin = new System.Windows.Forms.Padding(1);
+            this.groupBox57.Location = new System.Drawing.Point(301, 3);
             this.groupBox57.Name = "groupBox57";
             this.groupBox57.Size = new System.Drawing.Size(143, 64);
             this.groupBox57.TabIndex = 16;
@@ -2067,9 +1733,7 @@ namespace metilest2009
             // 
             // groupBox58
             // 
-            this.groupBox58.BackColor = System.Drawing.Color.PaleGreen;
             this.groupBox58.Controls.Add(this.txtVinaccioloMin);
-            this.groupBox58.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox58.Location = new System.Drawing.Point(6, 14);
             this.groupBox58.Name = "groupBox58";
             this.groupBox58.Size = new System.Drawing.Size(67, 44);
@@ -2080,16 +1744,14 @@ namespace metilest2009
             // txtVinaccioloMin
             // 
             this.txtVinaccioloMin.Location = new System.Drawing.Point(6, 19);
-            this.txtVinaccioloMin.Mask = "999";
+            this.txtVinaccioloMin.Mask = "99";
             this.txtVinaccioloMin.Name = "txtVinaccioloMin";
             this.txtVinaccioloMin.Size = new System.Drawing.Size(51, 20);
             this.txtVinaccioloMin.TabIndex = 0;
             // 
             // groupBox59
             // 
-            this.groupBox59.BackColor = System.Drawing.Color.LightSalmon;
             this.groupBox59.Controls.Add(this.txtVinaccioloMax);
-            this.groupBox59.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox59.Location = new System.Drawing.Point(73, 14);
             this.groupBox59.Name = "groupBox59";
             this.groupBox59.Size = new System.Drawing.Size(63, 44);
@@ -2100,30 +1762,25 @@ namespace metilest2009
             // txtVinaccioloMax
             // 
             this.txtVinaccioloMax.Location = new System.Drawing.Point(6, 18);
-            this.txtVinaccioloMax.Mask = "999";
+            this.txtVinaccioloMax.Mask = "99";
             this.txtVinaccioloMax.Name = "txtVinaccioloMax";
             this.txtVinaccioloMax.Size = new System.Drawing.Size(51, 20);
             this.txtVinaccioloMax.TabIndex = 1;
             // 
             // groupBox51
             // 
-            this.groupBox51.BackColor = System.Drawing.Color.MistyRose;
             this.groupBox51.Controls.Add(this.groupBox52);
             this.groupBox51.Controls.Add(this.groupBox53);
-            this.groupBox51.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox51.Location = new System.Drawing.Point(146, 529);
-            this.groupBox51.Margin = new System.Windows.Forms.Padding(1);
+            this.groupBox51.Location = new System.Drawing.Point(301, 73);
             this.groupBox51.Name = "groupBox51";
             this.groupBox51.Size = new System.Drawing.Size(143, 64);
             this.groupBox51.TabIndex = 17;
             this.groupBox51.TabStop = false;
-            this.groupBox51.Text = "Mais";
+            this.groupBox51.Text = "Mais raffinato";
             // 
             // groupBox52
             // 
-            this.groupBox52.BackColor = System.Drawing.Color.PaleGreen;
             this.groupBox52.Controls.Add(this.txtMaisRafMin);
-            this.groupBox52.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox52.Location = new System.Drawing.Point(6, 14);
             this.groupBox52.Name = "groupBox52";
             this.groupBox52.Size = new System.Drawing.Size(67, 44);
@@ -2134,16 +1791,14 @@ namespace metilest2009
             // txtMaisRafMin
             // 
             this.txtMaisRafMin.Location = new System.Drawing.Point(6, 19);
-            this.txtMaisRafMin.Mask = "999";
+            this.txtMaisRafMin.Mask = "99";
             this.txtMaisRafMin.Name = "txtMaisRafMin";
             this.txtMaisRafMin.Size = new System.Drawing.Size(51, 20);
             this.txtMaisRafMin.TabIndex = 0;
             // 
             // groupBox53
             // 
-            this.groupBox53.BackColor = System.Drawing.Color.LightSalmon;
             this.groupBox53.Controls.Add(this.txtMaisRafMax);
-            this.groupBox53.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox53.Location = new System.Drawing.Point(73, 14);
             this.groupBox53.Name = "groupBox53";
             this.groupBox53.Size = new System.Drawing.Size(63, 44);
@@ -2154,19 +1809,16 @@ namespace metilest2009
             // txtMaisRafMax
             // 
             this.txtMaisRafMax.Location = new System.Drawing.Point(6, 18);
-            this.txtMaisRafMax.Mask = "999";
+            this.txtMaisRafMax.Mask = "99";
             this.txtMaisRafMax.Name = "txtMaisRafMax";
             this.txtMaisRafMax.Size = new System.Drawing.Size(51, 20);
             this.txtMaisRafMax.TabIndex = 1;
             // 
             // groupBox69
             // 
-            this.groupBox69.BackColor = System.Drawing.Color.MistyRose;
             this.groupBox69.Controls.Add(this.groupBox70);
             this.groupBox69.Controls.Add(this.groupBox71);
-            this.groupBox69.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox69.Location = new System.Drawing.Point(291, 1);
-            this.groupBox69.Margin = new System.Windows.Forms.Padding(1);
+            this.groupBox69.Location = new System.Drawing.Point(301, 143);
             this.groupBox69.Name = "groupBox69";
             this.groupBox69.Size = new System.Drawing.Size(143, 64);
             this.groupBox69.TabIndex = 18;
@@ -2175,9 +1827,7 @@ namespace metilest2009
             // 
             // groupBox70
             // 
-            this.groupBox70.BackColor = System.Drawing.Color.PaleGreen;
             this.groupBox70.Controls.Add(this.txtGirasoleALinoleicoMin);
-            this.groupBox70.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox70.Location = new System.Drawing.Point(6, 14);
             this.groupBox70.Name = "groupBox70";
             this.groupBox70.Size = new System.Drawing.Size(67, 44);
@@ -2188,16 +1838,14 @@ namespace metilest2009
             // txtGirasoleALinoleicoMin
             // 
             this.txtGirasoleALinoleicoMin.Location = new System.Drawing.Point(6, 19);
-            this.txtGirasoleALinoleicoMin.Mask = "999";
+            this.txtGirasoleALinoleicoMin.Mask = "99";
             this.txtGirasoleALinoleicoMin.Name = "txtGirasoleALinoleicoMin";
             this.txtGirasoleALinoleicoMin.Size = new System.Drawing.Size(51, 20);
             this.txtGirasoleALinoleicoMin.TabIndex = 0;
             // 
             // groupBox71
             // 
-            this.groupBox71.BackColor = System.Drawing.Color.LightSalmon;
             this.groupBox71.Controls.Add(this.txtGirasoleALinoleicoMax);
-            this.groupBox71.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox71.Location = new System.Drawing.Point(73, 14);
             this.groupBox71.Name = "groupBox71";
             this.groupBox71.Size = new System.Drawing.Size(63, 44);
@@ -2208,19 +1856,16 @@ namespace metilest2009
             // txtGirasoleALinoleicoMax
             // 
             this.txtGirasoleALinoleicoMax.Location = new System.Drawing.Point(6, 18);
-            this.txtGirasoleALinoleicoMax.Mask = "999";
+            this.txtGirasoleALinoleicoMax.Mask = "99";
             this.txtGirasoleALinoleicoMax.Name = "txtGirasoleALinoleicoMax";
             this.txtGirasoleALinoleicoMax.Size = new System.Drawing.Size(51, 20);
             this.txtGirasoleALinoleicoMax.TabIndex = 1;
             // 
             // groupBox66
             // 
-            this.groupBox66.BackColor = System.Drawing.Color.MistyRose;
             this.groupBox66.Controls.Add(this.groupBox67);
             this.groupBox66.Controls.Add(this.groupBox68);
-            this.groupBox66.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox66.Location = new System.Drawing.Point(291, 67);
-            this.groupBox66.Margin = new System.Windows.Forms.Padding(1);
+            this.groupBox66.Location = new System.Drawing.Point(301, 213);
             this.groupBox66.Name = "groupBox66";
             this.groupBox66.Size = new System.Drawing.Size(143, 64);
             this.groupBox66.TabIndex = 19;
@@ -2229,9 +1874,7 @@ namespace metilest2009
             // 
             // groupBox67
             // 
-            this.groupBox67.BackColor = System.Drawing.Color.PaleGreen;
             this.groupBox67.Controls.Add(this.txtGirasoleAOleicoMin);
-            this.groupBox67.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox67.Location = new System.Drawing.Point(6, 14);
             this.groupBox67.Name = "groupBox67";
             this.groupBox67.Size = new System.Drawing.Size(67, 44);
@@ -2242,16 +1885,14 @@ namespace metilest2009
             // txtGirasoleAOleicoMin
             // 
             this.txtGirasoleAOleicoMin.Location = new System.Drawing.Point(6, 19);
-            this.txtGirasoleAOleicoMin.Mask = "999";
+            this.txtGirasoleAOleicoMin.Mask = "99";
             this.txtGirasoleAOleicoMin.Name = "txtGirasoleAOleicoMin";
             this.txtGirasoleAOleicoMin.Size = new System.Drawing.Size(51, 20);
             this.txtGirasoleAOleicoMin.TabIndex = 0;
             // 
             // groupBox68
             // 
-            this.groupBox68.BackColor = System.Drawing.Color.LightSalmon;
             this.groupBox68.Controls.Add(this.txtGirasoleAOleicoMax);
-            this.groupBox68.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox68.Location = new System.Drawing.Point(73, 14);
             this.groupBox68.Name = "groupBox68";
             this.groupBox68.Size = new System.Drawing.Size(63, 44);
@@ -2262,30 +1903,25 @@ namespace metilest2009
             // txtGirasoleAOleicoMax
             // 
             this.txtGirasoleAOleicoMax.Location = new System.Drawing.Point(6, 18);
-            this.txtGirasoleAOleicoMax.Mask = "999";
+            this.txtGirasoleAOleicoMax.Mask = "99";
             this.txtGirasoleAOleicoMax.Name = "txtGirasoleAOleicoMax";
             this.txtGirasoleAOleicoMax.Size = new System.Drawing.Size(51, 20);
             this.txtGirasoleAOleicoMax.TabIndex = 1;
             // 
             // groupBox99
             // 
-            this.groupBox99.BackColor = System.Drawing.Color.MistyRose;
             this.groupBox99.Controls.Add(this.groupBox100);
             this.groupBox99.Controls.Add(this.groupBox101);
-            this.groupBox99.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox99.Location = new System.Drawing.Point(291, 133);
-            this.groupBox99.Margin = new System.Windows.Forms.Padding(1);
+            this.groupBox99.Location = new System.Drawing.Point(301, 283);
             this.groupBox99.Name = "groupBox99";
             this.groupBox99.Size = new System.Drawing.Size(143, 64);
             this.groupBox99.TabIndex = 20;
             this.groupBox99.TabStop = false;
-            this.groupBox99.Text = "Sesamo";
+            this.groupBox99.Text = "Sesamo raffinato";
             // 
             // groupBox100
             // 
-            this.groupBox100.BackColor = System.Drawing.Color.PaleGreen;
             this.groupBox100.Controls.Add(this.txtSesamoRaffMin);
-            this.groupBox100.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox100.Location = new System.Drawing.Point(6, 14);
             this.groupBox100.Name = "groupBox100";
             this.groupBox100.Size = new System.Drawing.Size(67, 44);
@@ -2296,16 +1932,14 @@ namespace metilest2009
             // txtSesamoRaffMin
             // 
             this.txtSesamoRaffMin.Location = new System.Drawing.Point(6, 19);
-            this.txtSesamoRaffMin.Mask = "999";
+            this.txtSesamoRaffMin.Mask = "99";
             this.txtSesamoRaffMin.Name = "txtSesamoRaffMin";
             this.txtSesamoRaffMin.Size = new System.Drawing.Size(51, 20);
             this.txtSesamoRaffMin.TabIndex = 0;
             // 
             // groupBox101
             // 
-            this.groupBox101.BackColor = System.Drawing.Color.LightSalmon;
             this.groupBox101.Controls.Add(this.txtSesamoRaffMax);
-            this.groupBox101.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox101.Location = new System.Drawing.Point(73, 14);
             this.groupBox101.Name = "groupBox101";
             this.groupBox101.Size = new System.Drawing.Size(63, 44);
@@ -2316,19 +1950,16 @@ namespace metilest2009
             // txtSesamoRaffMax
             // 
             this.txtSesamoRaffMax.Location = new System.Drawing.Point(6, 18);
-            this.txtSesamoRaffMax.Mask = "999";
+            this.txtSesamoRaffMax.Mask = "99";
             this.txtSesamoRaffMax.Name = "txtSesamoRaffMax";
             this.txtSesamoRaffMax.Size = new System.Drawing.Size(51, 20);
             this.txtSesamoRaffMax.TabIndex = 1;
             // 
             // groupBox48
             // 
-            this.groupBox48.BackColor = System.Drawing.Color.MistyRose;
             this.groupBox48.Controls.Add(this.groupBox49);
             this.groupBox48.Controls.Add(this.groupBox50);
-            this.groupBox48.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox48.Location = new System.Drawing.Point(291, 199);
-            this.groupBox48.Margin = new System.Windows.Forms.Padding(1);
+            this.groupBox48.Location = new System.Drawing.Point(301, 353);
             this.groupBox48.Name = "groupBox48";
             this.groupBox48.Size = new System.Drawing.Size(143, 64);
             this.groupBox48.TabIndex = 21;
@@ -2337,9 +1968,7 @@ namespace metilest2009
             // 
             // groupBox49
             // 
-            this.groupBox49.BackColor = System.Drawing.Color.PaleGreen;
             this.groupBox49.Controls.Add(this.txtNocciolaMin);
-            this.groupBox49.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox49.Location = new System.Drawing.Point(6, 14);
             this.groupBox49.Name = "groupBox49";
             this.groupBox49.Size = new System.Drawing.Size(67, 44);
@@ -2350,16 +1979,14 @@ namespace metilest2009
             // txtNocciolaMin
             // 
             this.txtNocciolaMin.Location = new System.Drawing.Point(6, 19);
-            this.txtNocciolaMin.Mask = "999";
+            this.txtNocciolaMin.Mask = "99";
             this.txtNocciolaMin.Name = "txtNocciolaMin";
             this.txtNocciolaMin.Size = new System.Drawing.Size(51, 20);
             this.txtNocciolaMin.TabIndex = 0;
             // 
             // groupBox50
             // 
-            this.groupBox50.BackColor = System.Drawing.Color.LightSalmon;
             this.groupBox50.Controls.Add(this.txtNocciolaMax);
-            this.groupBox50.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox50.Location = new System.Drawing.Point(73, 14);
             this.groupBox50.Name = "groupBox50";
             this.groupBox50.Size = new System.Drawing.Size(63, 44);
@@ -2370,19 +1997,16 @@ namespace metilest2009
             // txtNocciolaMax
             // 
             this.txtNocciolaMax.Location = new System.Drawing.Point(6, 18);
-            this.txtNocciolaMax.Mask = "999";
+            this.txtNocciolaMax.Mask = "99";
             this.txtNocciolaMax.Name = "txtNocciolaMax";
             this.txtNocciolaMax.Size = new System.Drawing.Size(51, 20);
             this.txtNocciolaMax.TabIndex = 1;
             // 
             // groupBox72
             // 
-            this.groupBox72.BackColor = System.Drawing.Color.MistyRose;
             this.groupBox72.Controls.Add(this.groupBox73);
             this.groupBox72.Controls.Add(this.groupBox74);
-            this.groupBox72.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox72.Location = new System.Drawing.Point(291, 265);
-            this.groupBox72.Margin = new System.Windows.Forms.Padding(1);
+            this.groupBox72.Location = new System.Drawing.Point(301, 423);
             this.groupBox72.Name = "groupBox72";
             this.groupBox72.Size = new System.Drawing.Size(143, 64);
             this.groupBox72.TabIndex = 22;
@@ -2391,9 +2015,7 @@ namespace metilest2009
             // 
             // groupBox73
             // 
-            this.groupBox73.BackColor = System.Drawing.Color.PaleGreen;
             this.groupBox73.Controls.Add(this.txtOlivaMin);
-            this.groupBox73.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox73.Location = new System.Drawing.Point(6, 14);
             this.groupBox73.Name = "groupBox73";
             this.groupBox73.Size = new System.Drawing.Size(67, 44);
@@ -2404,16 +2026,14 @@ namespace metilest2009
             // txtOlivaMin
             // 
             this.txtOlivaMin.Location = new System.Drawing.Point(6, 19);
-            this.txtOlivaMin.Mask = "999";
+            this.txtOlivaMin.Mask = "99";
             this.txtOlivaMin.Name = "txtOlivaMin";
             this.txtOlivaMin.Size = new System.Drawing.Size(51, 20);
             this.txtOlivaMin.TabIndex = 0;
             // 
             // groupBox74
             // 
-            this.groupBox74.BackColor = System.Drawing.Color.LightSalmon;
             this.groupBox74.Controls.Add(this.txtOlivaMax);
-            this.groupBox74.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox74.Location = new System.Drawing.Point(73, 14);
             this.groupBox74.Name = "groupBox74";
             this.groupBox74.Size = new System.Drawing.Size(63, 44);
@@ -2424,19 +2044,16 @@ namespace metilest2009
             // txtOlivaMax
             // 
             this.txtOlivaMax.Location = new System.Drawing.Point(6, 18);
-            this.txtOlivaMax.Mask = "999";
+            this.txtOlivaMax.Mask = "99";
             this.txtOlivaMax.Name = "txtOlivaMax";
             this.txtOlivaMax.Size = new System.Drawing.Size(51, 20);
             this.txtOlivaMax.TabIndex = 1;
             // 
             // groupBox75
             // 
-            this.groupBox75.BackColor = System.Drawing.Color.MistyRose;
             this.groupBox75.Controls.Add(this.groupBox76);
             this.groupBox75.Controls.Add(this.groupBox77);
-            this.groupBox75.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox75.Location = new System.Drawing.Point(291, 331);
-            this.groupBox75.Margin = new System.Windows.Forms.Padding(1);
+            this.groupBox75.Location = new System.Drawing.Point(301, 493);
             this.groupBox75.Name = "groupBox75";
             this.groupBox75.Size = new System.Drawing.Size(143, 64);
             this.groupBox75.TabIndex = 23;
@@ -2445,9 +2062,7 @@ namespace metilest2009
             // 
             // groupBox76
             // 
-            this.groupBox76.BackColor = System.Drawing.Color.PaleGreen;
             this.groupBox76.Controls.Add(this.txtBurroCacaoMin);
-            this.groupBox76.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox76.Location = new System.Drawing.Point(6, 14);
             this.groupBox76.Name = "groupBox76";
             this.groupBox76.Size = new System.Drawing.Size(67, 44);
@@ -2458,16 +2073,14 @@ namespace metilest2009
             // txtBurroCacaoMin
             // 
             this.txtBurroCacaoMin.Location = new System.Drawing.Point(6, 19);
-            this.txtBurroCacaoMin.Mask = "999";
+            this.txtBurroCacaoMin.Mask = "99";
             this.txtBurroCacaoMin.Name = "txtBurroCacaoMin";
             this.txtBurroCacaoMin.Size = new System.Drawing.Size(51, 20);
             this.txtBurroCacaoMin.TabIndex = 0;
             // 
             // groupBox77
             // 
-            this.groupBox77.BackColor = System.Drawing.Color.LightSalmon;
             this.groupBox77.Controls.Add(this.txtBurroCacaoMax);
-            this.groupBox77.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox77.Location = new System.Drawing.Point(73, 14);
             this.groupBox77.Name = "groupBox77";
             this.groupBox77.Size = new System.Drawing.Size(63, 44);
@@ -2478,19 +2091,16 @@ namespace metilest2009
             // txtBurroCacaoMax
             // 
             this.txtBurroCacaoMax.Location = new System.Drawing.Point(6, 18);
-            this.txtBurroCacaoMax.Mask = "999";
+            this.txtBurroCacaoMax.Mask = "99";
             this.txtBurroCacaoMax.Name = "txtBurroCacaoMax";
             this.txtBurroCacaoMax.Size = new System.Drawing.Size(51, 20);
             this.txtBurroCacaoMax.TabIndex = 1;
             // 
             // groupBox102
             // 
-            this.groupBox102.BackColor = System.Drawing.Color.MistyRose;
             this.groupBox102.Controls.Add(this.groupBox103);
             this.groupBox102.Controls.Add(this.groupBox104);
-            this.groupBox102.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox102.Location = new System.Drawing.Point(291, 397);
-            this.groupBox102.Margin = new System.Windows.Forms.Padding(1);
+            this.groupBox102.Location = new System.Drawing.Point(450, 3);
             this.groupBox102.Name = "groupBox102";
             this.groupBox102.Size = new System.Drawing.Size(143, 64);
             this.groupBox102.TabIndex = 24;
@@ -2499,9 +2109,7 @@ namespace metilest2009
             // 
             // groupBox103
             // 
-            this.groupBox103.BackColor = System.Drawing.Color.PaleGreen;
             this.groupBox103.Controls.Add(this.txtBabassuMin);
-            this.groupBox103.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox103.Location = new System.Drawing.Point(6, 14);
             this.groupBox103.Name = "groupBox103";
             this.groupBox103.Size = new System.Drawing.Size(67, 44);
@@ -2512,16 +2120,14 @@ namespace metilest2009
             // txtBabassuMin
             // 
             this.txtBabassuMin.Location = new System.Drawing.Point(6, 19);
-            this.txtBabassuMin.Mask = "999";
+            this.txtBabassuMin.Mask = "99";
             this.txtBabassuMin.Name = "txtBabassuMin";
             this.txtBabassuMin.Size = new System.Drawing.Size(51, 20);
             this.txtBabassuMin.TabIndex = 0;
             // 
             // groupBox104
             // 
-            this.groupBox104.BackColor = System.Drawing.Color.LightSalmon;
             this.groupBox104.Controls.Add(this.txtBabassuMax);
-            this.groupBox104.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox104.Location = new System.Drawing.Point(73, 14);
             this.groupBox104.Name = "groupBox104";
             this.groupBox104.Size = new System.Drawing.Size(63, 44);
@@ -2531,31 +2137,26 @@ namespace metilest2009
             // 
             // txtBabassuMax
             // 
-            this.txtBabassuMax.Location = new System.Drawing.Point(6, 19);
-            this.txtBabassuMax.Mask = "999";
+            this.txtBabassuMax.Location = new System.Drawing.Point(6, 18);
+            this.txtBabassuMax.Mask = "99";
             this.txtBabassuMax.Name = "txtBabassuMax";
             this.txtBabassuMax.Size = new System.Drawing.Size(51, 20);
             this.txtBabassuMax.TabIndex = 1;
             // 
             // groupBox105
             // 
-            this.groupBox105.BackColor = System.Drawing.Color.MistyRose;
             this.groupBox105.Controls.Add(this.groupBox106);
             this.groupBox105.Controls.Add(this.groupBox107);
-            this.groupBox105.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox105.Location = new System.Drawing.Point(291, 463);
-            this.groupBox105.Margin = new System.Windows.Forms.Padding(1);
+            this.groupBox105.Location = new System.Drawing.Point(450, 73);
             this.groupBox105.Name = "groupBox105";
             this.groupBox105.Size = new System.Drawing.Size(143, 64);
             this.groupBox105.TabIndex = 25;
             this.groupBox105.TabStop = false;
-            this.groupBox105.Text = "Karitï¿½";
+            this.groupBox105.Text = "Karitè";
             // 
             // groupBox106
             // 
-            this.groupBox106.BackColor = System.Drawing.Color.PaleGreen;
             this.groupBox106.Controls.Add(this.txtKariteMin);
-            this.groupBox106.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox106.Location = new System.Drawing.Point(6, 14);
             this.groupBox106.Name = "groupBox106";
             this.groupBox106.Size = new System.Drawing.Size(67, 44);
@@ -2566,16 +2167,14 @@ namespace metilest2009
             // txtKariteMin
             // 
             this.txtKariteMin.Location = new System.Drawing.Point(6, 19);
-            this.txtKariteMin.Mask = "999";
+            this.txtKariteMin.Mask = "99";
             this.txtKariteMin.Name = "txtKariteMin";
             this.txtKariteMin.Size = new System.Drawing.Size(51, 20);
             this.txtKariteMin.TabIndex = 0;
             // 
             // groupBox107
             // 
-            this.groupBox107.BackColor = System.Drawing.Color.LightSalmon;
             this.groupBox107.Controls.Add(this.txtKariteMax);
-            this.groupBox107.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox107.Location = new System.Drawing.Point(73, 14);
             this.groupBox107.Name = "groupBox107";
             this.groupBox107.Size = new System.Drawing.Size(63, 44);
@@ -2586,19 +2185,16 @@ namespace metilest2009
             // txtKariteMax
             // 
             this.txtKariteMax.Location = new System.Drawing.Point(6, 18);
-            this.txtKariteMax.Mask = "999";
+            this.txtKariteMax.Mask = "99";
             this.txtKariteMax.Name = "txtKariteMax";
             this.txtKariteMax.Size = new System.Drawing.Size(51, 20);
             this.txtKariteMax.TabIndex = 1;
             // 
             // groupBox84
             // 
-            this.groupBox84.BackColor = System.Drawing.Color.MistyRose;
             this.groupBox84.Controls.Add(this.groupBox85);
             this.groupBox84.Controls.Add(this.groupBox86);
-            this.groupBox84.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox84.Location = new System.Drawing.Point(291, 529);
-            this.groupBox84.Margin = new System.Windows.Forms.Padding(1);
+            this.groupBox84.Location = new System.Drawing.Point(450, 143);
             this.groupBox84.Name = "groupBox84";
             this.groupBox84.Size = new System.Drawing.Size(143, 64);
             this.groupBox84.TabIndex = 26;
@@ -2607,9 +2203,7 @@ namespace metilest2009
             // 
             // groupBox85
             // 
-            this.groupBox85.BackColor = System.Drawing.Color.PaleGreen;
             this.groupBox85.Controls.Add(this.txtBurroMin);
-            this.groupBox85.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox85.Location = new System.Drawing.Point(6, 14);
             this.groupBox85.Name = "groupBox85";
             this.groupBox85.Size = new System.Drawing.Size(67, 44);
@@ -2620,16 +2214,14 @@ namespace metilest2009
             // txtBurroMin
             // 
             this.txtBurroMin.Location = new System.Drawing.Point(6, 19);
-            this.txtBurroMin.Mask = "999";
+            this.txtBurroMin.Mask = "99";
             this.txtBurroMin.Name = "txtBurroMin";
             this.txtBurroMin.Size = new System.Drawing.Size(51, 20);
             this.txtBurroMin.TabIndex = 0;
             // 
             // groupBox86
             // 
-            this.groupBox86.BackColor = System.Drawing.Color.LightSalmon;
             this.groupBox86.Controls.Add(this.txtBurroMax);
-            this.groupBox86.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox86.Location = new System.Drawing.Point(73, 14);
             this.groupBox86.Name = "groupBox86";
             this.groupBox86.Size = new System.Drawing.Size(63, 44);
@@ -2640,19 +2232,16 @@ namespace metilest2009
             // txtBurroMax
             // 
             this.txtBurroMax.Location = new System.Drawing.Point(6, 18);
-            this.txtBurroMax.Mask = "999";
+            this.txtBurroMax.Mask = "99";
             this.txtBurroMax.Name = "txtBurroMax";
             this.txtBurroMax.Size = new System.Drawing.Size(51, 20);
             this.txtBurroMax.TabIndex = 1;
             // 
             // groupBox78
             // 
-            this.groupBox78.BackColor = System.Drawing.Color.MistyRose;
             this.groupBox78.Controls.Add(this.groupBox79);
             this.groupBox78.Controls.Add(this.groupBox80);
-            this.groupBox78.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox78.Location = new System.Drawing.Point(436, 1);
-            this.groupBox78.Margin = new System.Windows.Forms.Padding(1);
+            this.groupBox78.Location = new System.Drawing.Point(450, 213);
             this.groupBox78.Name = "groupBox78";
             this.groupBox78.Size = new System.Drawing.Size(143, 64);
             this.groupBox78.TabIndex = 27;
@@ -2661,9 +2250,7 @@ namespace metilest2009
             // 
             // groupBox79
             // 
-            this.groupBox79.BackColor = System.Drawing.Color.PaleGreen;
             this.groupBox79.Controls.Add(this.txtStruttoMin);
-            this.groupBox79.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox79.Location = new System.Drawing.Point(6, 14);
             this.groupBox79.Name = "groupBox79";
             this.groupBox79.Size = new System.Drawing.Size(67, 44);
@@ -2674,16 +2261,14 @@ namespace metilest2009
             // txtStruttoMin
             // 
             this.txtStruttoMin.Location = new System.Drawing.Point(6, 19);
-            this.txtStruttoMin.Mask = "999";
+            this.txtStruttoMin.Mask = "99";
             this.txtStruttoMin.Name = "txtStruttoMin";
             this.txtStruttoMin.Size = new System.Drawing.Size(51, 20);
             this.txtStruttoMin.TabIndex = 0;
             // 
             // groupBox80
             // 
-            this.groupBox80.BackColor = System.Drawing.Color.LightSalmon;
             this.groupBox80.Controls.Add(this.txtStruttoMax);
-            this.groupBox80.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox80.Location = new System.Drawing.Point(73, 14);
             this.groupBox80.Name = "groupBox80";
             this.groupBox80.Size = new System.Drawing.Size(63, 44);
@@ -2694,30 +2279,25 @@ namespace metilest2009
             // txtStruttoMax
             // 
             this.txtStruttoMax.Location = new System.Drawing.Point(6, 18);
-            this.txtStruttoMax.Mask = "999";
+            this.txtStruttoMax.Mask = "99";
             this.txtStruttoMax.Name = "txtStruttoMax";
             this.txtStruttoMax.Size = new System.Drawing.Size(51, 20);
             this.txtStruttoMax.TabIndex = 1;
             // 
             // groupBox81
             // 
-            this.groupBox81.BackColor = System.Drawing.Color.MistyRose;
             this.groupBox81.Controls.Add(this.groupBox82);
             this.groupBox81.Controls.Add(this.groupBox83);
-            this.groupBox81.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox81.Location = new System.Drawing.Point(436, 67);
-            this.groupBox81.Margin = new System.Windows.Forms.Padding(1);
+            this.groupBox81.Location = new System.Drawing.Point(450, 283);
             this.groupBox81.Name = "groupBox81";
             this.groupBox81.Size = new System.Drawing.Size(143, 64);
             this.groupBox81.TabIndex = 28;
             this.groupBox81.TabStop = false;
-            this.groupBox81.Text = "Sego";
+            this.groupBox81.Text = "Sego raffinato";
             // 
             // groupBox82
             // 
-            this.groupBox82.BackColor = System.Drawing.Color.PaleGreen;
             this.groupBox82.Controls.Add(this.txtSegoRafMin);
-            this.groupBox82.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox82.Location = new System.Drawing.Point(6, 14);
             this.groupBox82.Name = "groupBox82";
             this.groupBox82.Size = new System.Drawing.Size(67, 44);
@@ -2728,16 +2308,14 @@ namespace metilest2009
             // txtSegoRafMin
             // 
             this.txtSegoRafMin.Location = new System.Drawing.Point(6, 19);
-            this.txtSegoRafMin.Mask = "999";
+            this.txtSegoRafMin.Mask = "99";
             this.txtSegoRafMin.Name = "txtSegoRafMin";
             this.txtSegoRafMin.Size = new System.Drawing.Size(51, 20);
             this.txtSegoRafMin.TabIndex = 0;
             // 
             // groupBox83
             // 
-            this.groupBox83.BackColor = System.Drawing.Color.LightSalmon;
             this.groupBox83.Controls.Add(this.txtSegoRafMax);
-            this.groupBox83.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox83.Location = new System.Drawing.Point(73, 14);
             this.groupBox83.Name = "groupBox83";
             this.groupBox83.Size = new System.Drawing.Size(63, 44);
@@ -2748,172 +2326,10 @@ namespace metilest2009
             // txtSegoRafMax
             // 
             this.txtSegoRafMax.Location = new System.Drawing.Point(6, 18);
-            this.txtSegoRafMax.Mask = "999";
+            this.txtSegoRafMax.Mask = "99";
             this.txtSegoRafMax.Name = "txtSegoRafMax";
             this.txtSegoRafMax.Size = new System.Drawing.Size(51, 20);
             this.txtSegoRafMax.TabIndex = 1;
-            // 
-            // groupBoxX
-            // 
-            this.groupBoxX.BackColor = System.Drawing.Color.MistyRose;
-            this.groupBoxX.Controls.Add(this.groupBoxXMin);
-            this.groupBoxX.Controls.Add(this.groupBoxXMax);
-            this.groupBoxX.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxX.Location = new System.Drawing.Point(436, 133);
-            this.groupBoxX.Margin = new System.Windows.Forms.Padding(1);
-            this.groupBoxX.Name = "groupBoxX";
-            this.groupBoxX.Size = new System.Drawing.Size(143, 64);
-            this.groupBoxX.TabIndex = 28;
-            this.groupBoxX.TabStop = false;
-            this.groupBoxX.Text = "X";
-            // 
-            // groupBoxXMin
-            // 
-            this.groupBoxXMin.BackColor = System.Drawing.Color.PaleGreen;
-            this.groupBoxXMin.Controls.Add(this.txtXMin);
-            this.groupBoxXMin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxXMin.Location = new System.Drawing.Point(6, 14);
-            this.groupBoxXMin.Name = "groupBoxXMin";
-            this.groupBoxXMin.Size = new System.Drawing.Size(67, 44);
-            this.groupBoxXMin.TabIndex = 1;
-            this.groupBoxXMin.TabStop = false;
-            this.groupBoxXMin.Text = "Min.";
-            // 
-            // txtXMin
-            // 
-            this.txtXMin.Location = new System.Drawing.Point(6, 19);
-            this.txtXMin.Mask = "999";
-            this.txtXMin.Name = "txtXMin";
-            this.txtXMin.Size = new System.Drawing.Size(51, 20);
-            this.txtXMin.TabIndex = 0;
-            // 
-            // groupBoxXMax
-            // 
-            this.groupBoxXMax.BackColor = System.Drawing.Color.LightSalmon;
-            this.groupBoxXMax.Controls.Add(this.txtXMax);
-            this.groupBoxXMax.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxXMax.Location = new System.Drawing.Point(73, 14);
-            this.groupBoxXMax.Name = "groupBoxXMax";
-            this.groupBoxXMax.Size = new System.Drawing.Size(63, 44);
-            this.groupBoxXMax.TabIndex = 2;
-            this.groupBoxXMax.TabStop = false;
-            this.groupBoxXMax.Text = "Max.";
-            // 
-            // txtXMax
-            // 
-            this.txtXMax.Location = new System.Drawing.Point(6, 18);
-            this.txtXMax.Mask = "999";
-            this.txtXMax.Name = "txtXMax";
-            this.txtXMax.Size = new System.Drawing.Size(51, 20);
-            this.txtXMax.TabIndex = 1;
-            // 
-            // groupBoxY
-            // 
-            this.groupBoxY.BackColor = System.Drawing.Color.MistyRose;
-            this.groupBoxY.Controls.Add(this.groupBoxYMin);
-            this.groupBoxY.Controls.Add(this.groupBoxYMax);
-            this.groupBoxY.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxY.Location = new System.Drawing.Point(436, 199);
-            this.groupBoxY.Margin = new System.Windows.Forms.Padding(1);
-            this.groupBoxY.Name = "groupBoxY";
-            this.groupBoxY.Size = new System.Drawing.Size(143, 64);
-            this.groupBoxY.TabIndex = 28;
-            this.groupBoxY.TabStop = false;
-            this.groupBoxY.Text = "Y";
-            // 
-            // groupBoxYMin
-            // 
-            this.groupBoxYMin.BackColor = System.Drawing.Color.PaleGreen;
-            this.groupBoxYMin.Controls.Add(this.txtYMin);
-            this.groupBoxYMin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxYMin.Location = new System.Drawing.Point(6, 14);
-            this.groupBoxYMin.Name = "groupBoxYMin";
-            this.groupBoxYMin.Size = new System.Drawing.Size(67, 44);
-            this.groupBoxYMin.TabIndex = 1;
-            this.groupBoxYMin.TabStop = false;
-            this.groupBoxYMin.Text = "Min.";
-            // 
-            // txtYMin
-            // 
-            this.txtYMin.Location = new System.Drawing.Point(6, 19);
-            this.txtYMin.Mask = "999";
-            this.txtYMin.Name = "txtYMin";
-            this.txtYMin.Size = new System.Drawing.Size(51, 20);
-            this.txtYMin.TabIndex = 0;
-            // 
-            // groupBoxYMax
-            // 
-            this.groupBoxYMax.BackColor = System.Drawing.Color.LightSalmon;
-            this.groupBoxYMax.Controls.Add(this.txtYMax);
-            this.groupBoxYMax.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxYMax.Location = new System.Drawing.Point(73, 14);
-            this.groupBoxYMax.Name = "groupBoxYMax";
-            this.groupBoxYMax.Size = new System.Drawing.Size(63, 44);
-            this.groupBoxYMax.TabIndex = 2;
-            this.groupBoxYMax.TabStop = false;
-            this.groupBoxYMax.Text = "Max.";
-            // 
-            // txtYMax
-            // 
-            this.txtYMax.Location = new System.Drawing.Point(6, 18);
-            this.txtYMax.Mask = "999";
-            this.txtYMax.Name = "txtYMax";
-            this.txtYMax.Size = new System.Drawing.Size(51, 20);
-            this.txtYMax.TabIndex = 1;
-            // 
-            // groupBoxZ
-            // 
-            this.groupBoxZ.BackColor = System.Drawing.Color.MistyRose;
-            this.groupBoxZ.Controls.Add(this.groupBoxZMin);
-            this.groupBoxZ.Controls.Add(this.groupBoxZMax);
-            this.groupBoxZ.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxZ.Location = new System.Drawing.Point(436, 265);
-            this.groupBoxZ.Margin = new System.Windows.Forms.Padding(1);
-            this.groupBoxZ.Name = "groupBoxZ";
-            this.groupBoxZ.Size = new System.Drawing.Size(143, 64);
-            this.groupBoxZ.TabIndex = 28;
-            this.groupBoxZ.TabStop = false;
-            this.groupBoxZ.Text = "Z";
-            // 
-            // groupBoxZMin
-            // 
-            this.groupBoxZMin.BackColor = System.Drawing.Color.PaleGreen;
-            this.groupBoxZMin.Controls.Add(this.txtZMin);
-            this.groupBoxZMin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxZMin.Location = new System.Drawing.Point(6, 14);
-            this.groupBoxZMin.Name = "groupBoxZMin";
-            this.groupBoxZMin.Size = new System.Drawing.Size(67, 44);
-            this.groupBoxZMin.TabIndex = 1;
-            this.groupBoxZMin.TabStop = false;
-            this.groupBoxZMin.Text = "Min.";
-            // 
-            // txtZMin
-            // 
-            this.txtZMin.Location = new System.Drawing.Point(6, 19);
-            this.txtZMin.Mask = "999";
-            this.txtZMin.Name = "txtZMin";
-            this.txtZMin.Size = new System.Drawing.Size(51, 20);
-            this.txtZMin.TabIndex = 0;
-            // 
-            // groupBoxZMax
-            // 
-            this.groupBoxZMax.BackColor = System.Drawing.Color.LightSalmon;
-            this.groupBoxZMax.Controls.Add(this.txtZMax);
-            this.groupBoxZMax.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBoxZMax.Location = new System.Drawing.Point(73, 14);
-            this.groupBoxZMax.Name = "groupBoxZMax";
-            this.groupBoxZMax.Size = new System.Drawing.Size(63, 44);
-            this.groupBoxZMax.TabIndex = 2;
-            this.groupBoxZMax.TabStop = false;
-            this.groupBoxZMax.Text = "Max.";
-            // 
-            // txtZMax
-            // 
-            this.txtZMax.Location = new System.Drawing.Point(6, 18);
-            this.txtZMax.Mask = "999";
-            this.txtZMax.Name = "txtZMax";
-            this.txtZMax.Size = new System.Drawing.Size(51, 20);
-            this.txtZMax.TabIndex = 1;
             // 
             // InsermentoDati
             // 
@@ -2923,14 +2339,12 @@ namespace metilest2009
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
-            this.MainMenuStrip = this.menuStrip1;
             this.Name = "InsermentoDati";
-            this.Text = "Metilest - Inserimento dati";
+            this.Text = "Metilest 2 - Inserimento dati";
+            this.Load += new System.EventHandler(this.InsermentoDati_Load);
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
@@ -3132,21 +2546,6 @@ namespace metilest2009
             this.groupBox82.PerformLayout();
             this.groupBox83.ResumeLayout(false);
             this.groupBox83.PerformLayout();
-            this.groupBoxX.ResumeLayout(false);
-            this.groupBoxXMin.ResumeLayout(false);
-            this.groupBoxXMin.PerformLayout();
-            this.groupBoxXMax.ResumeLayout(false);
-            this.groupBoxXMax.PerformLayout();
-            this.groupBoxY.ResumeLayout(false);
-            this.groupBoxYMin.ResumeLayout(false);
-            this.groupBoxYMin.PerformLayout();
-            this.groupBoxYMax.ResumeLayout(false);
-            this.groupBoxYMax.PerformLayout();
-            this.groupBoxZ.ResumeLayout(false);
-            this.groupBoxZMin.ResumeLayout(false);
-            this.groupBoxZMin.PerformLayout();
-            this.groupBoxZMax.ResumeLayout(false);
-            this.groupBoxZMax.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -3276,29 +2675,16 @@ namespace metilest2009
         private System.Windows.Forms.GroupBox groupBox82;
         private System.Windows.Forms.MaskedTextBox txtSegoRafMin;
         private System.Windows.Forms.GroupBox groupBox83;
-		private System.Windows.Forms.GroupBox groupBoxX;
-		private System.Windows.Forms.GroupBox groupBoxY;
-		private System.Windows.Forms.GroupBox groupBoxZ;
-		private System.Windows.Forms.GroupBox groupBoxXMax;
-        private System.Windows.Forms.GroupBox groupBoxYMax;
-        private System.Windows.Forms.GroupBox groupBoxZMax;
-		private System.Windows.Forms.GroupBox groupBoxXMin;
-        private System.Windows.Forms.GroupBox groupBoxYMin;
-        private System.Windows.Forms.GroupBox groupBoxZMin;
         private System.Windows.Forms.MaskedTextBox txtSegoRafMax;
-		private System.Windows.Forms.MaskedTextBox txtXMax;
-		private System.Windows.Forms.MaskedTextBox txtXMin;
-		private System.Windows.Forms.MaskedTextBox txtYMax;
-		private System.Windows.Forms.MaskedTextBox txtYMin;
-		private System.Windows.Forms.MaskedTextBox txtZMax;
-		private System.Windows.Forms.MaskedTextBox txtZMin;
         private System.Windows.Forms.GroupBox groupBox84;
         private System.Windows.Forms.GroupBox groupBox85;
         private System.Windows.Forms.MaskedTextBox txtBurroMin;
         private System.Windows.Forms.GroupBox groupBox86;
         private System.Windows.Forms.MaskedTextBox txtBurroMax;
+        private System.Windows.Forms.MaskedTextBox stepperc;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnElabora;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.GroupBox groupBox87;
         private System.Windows.Forms.MaskedTextBox txtC6;
         private System.Windows.Forms.GroupBox groupBox88;
@@ -3371,18 +2757,6 @@ namespace metilest2009
         private System.Windows.Forms.MaskedTextBox txtC17m;
         private System.Windows.Forms.GroupBox groupBox111;
         private System.Windows.Forms.MaskedTextBox txtC18CON;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem esciToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem visualizzaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem tabellaDegliStandardToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem aiutoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem infoToolStripMenuItem;
-
-        private System.Windows.Forms.ToolStripComboBox cmbStepPercent;
-        private System.Windows.Forms.ToolStripMenuItem utilityToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ricaricaGliStandardDaFileToolStripMenuItem;
-        private System.Windows.Forms.Button btnClsGrassi;
     }
 }
 
