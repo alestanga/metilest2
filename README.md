@@ -146,16 +146,6 @@ the parent `Metilest2` repository, not here.
   licence dialog), the solution was upgraded from VS2008 to VS2017, and the
   project directory was restored to the depth its `.sln` expects.
 
-## The modern port
-
-A cross-platform rewrite in .NET 8 + Avalonia lives in the parent `Metilest2`
-repository (`Metilest2.Avalonia/`). It reproduces the same two-step workflow and
-optimiser, runs on Windows, Linux and macOS, and adds branch-and-bound pruning
-and multi-core parallelism to the search.
-
-It does **not** yet reproduce report export or the standards-table editor —
-those remain exclusive to this Windows build.
-
 ## License
 
 GNU General Public License v3.0 or later — see [LICENSE](LICENSE).
